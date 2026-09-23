@@ -195,6 +195,47 @@
     line-height:1.2;
   }
 
+
+
+  .publication-tabs {
+    display:flex;
+    gap:12px;
+    margin:0 0 38px;
+    border-bottom:1px solid #d9dee3;
+    padding-bottom:18px;
+  }
+
+  .publication-tab {
+    min-width:150px;
+    border:1px solid var(--accent-color);
+    background:#fff;
+    color:var(--accent-color);
+    border-radius:7px;
+    padding:12px 24px;
+    font-size:15px;
+    font-weight:600;
+    letter-spacing:.02em;
+    transition:.2s ease;
+  }
+
+  .publication-tab:hover,
+  .publication-tab.active {
+    background:var(--accent-color);
+    color:#fff;
+  }
+
+  .publication-panel {
+    display:none;
+  }
+
+  .publication-panel.active {
+    display:block;
+  }
+
+  .conference-meta-label {
+    font-weight:700;
+  }
+
   @media (max-width:767px) {
     .publication-button {
       grid-template-columns:36px 1fr 20px;
@@ -225,10 +266,7 @@
     <div class="container d-flex justify-content-center justify-content-md-start">
       <div class="contact-info d-flex align-items-center">
         <i class="bi bi-envelope d-flex align-items-center">
-          <a href="mailto:contact@example.com">contact@example.com</a>
-        </i>
-        <i class="bi bi-phone d-flex align-items-center ms-4">
-          <span>+82-00-0000-0000</span>
+          <a href="mailto:hyunae0608.jung@gmail.com">hyunae0608.jung@gmail.com</a>
         </i>
       </div>
     </div>
@@ -252,7 +290,8 @@
               <li><a href="research-overview.html">Overview</a></li>
               <li><a href="projects.html">Projects</a></li>
               <li><a href="root-health.html">Root Health</a></li>
-              <li><a href="radar.html">RADAR</a></li>
+               <li><a href="radar.html">RADAR</a></li>
+ <li><a href="prism.html">PRISM</a></li>
             </ul>
           </li>
 
@@ -284,6 +323,12 @@
       <h1 class="page-title">PUBLICATIONS</h1>
       <hr class="title-line">
 
+      <div class="publication-tabs" role="tablist" aria-label="Publication categories">
+        <button class="publication-tab active" type="button" data-target="journal-panel">Journal</button>
+        <button class="publication-tab" type="button" data-target="conference-panel">Conference</button>
+      </div>
+
+      <div id="journal-panel" class="publication-panel active">
       <h2 class="year-title">2026</h2>
 
       <div class="publication-item" data-aos="fade-up">
@@ -478,6 +523,88 @@
         </div>
       </div>
 
+      </div>
+
+      <div id="conference-panel" class="publication-panel">
+
+      <h2 class="year-title">2026</h2>
+
+      <div class="publication-item" data-aos="fade-up">
+        <button
+          class="publication-button"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#conference-2026-1"
+          aria-expanded="false"
+          aria-controls="conference-2026-1">
+
+          <div class="publication-number">01</div>
+
+          <div>
+            <span class="publication-type">Conference</span>
+            <h3 class="publication-title">
+              Efficacy of HER2-Directed Therapy in Salivary Gland Tumors: Comparable Overall Survival Across HER2-Low and HER2-High Disease
+            </h3>
+            <p class="publication-meta">
+              ESMO Asia Congress 2026
+            </p>
+          </div>
+
+          <i class="bi bi-chevron-down publication-icon"></i>
+        </button>
+
+        <div class="collapse" id="conference-2026-1">
+          <div class="publication-detail">
+            <div class="detail-grid">
+              <div class="detail-label">Authors</div>
+              <div class="detail-value"></div>
+
+              <div class="detail-label">Conference</div>
+              <div class="detail-value">ESMO Asia Congress 2026</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="publication-item" data-aos="fade-up">
+        <button
+          class="publication-button"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#conference-2026-2"
+          aria-expanded="false"
+          aria-controls="conference-2026-2">
+
+          <div class="publication-number">02</div>
+
+          <div>
+            <span class="publication-type">Conference</span>
+            <h3 class="publication-title">
+              RADAR-EGFR: An Artificial Intelligence-powered Longitudinal Prediction Model for Survival Outcomes in Advanced EGFR-mutant NSCLC Receiving EGFR-TKI Therapy
+            </h3>
+            <p class="publication-meta">
+              ESMO Asia Congress 2026
+            </p>
+          </div>
+
+          <i class="bi bi-chevron-down publication-icon"></i>
+        </button>
+
+        <div class="collapse" id="conference-2026-2">
+          <div class="publication-detail">
+            <div class="detail-grid">
+              <div class="detail-label">Authors</div>
+              <div class="detail-value"></div>
+
+              <div class="detail-label">Conference</div>
+              <div class="detail-value">ESMO Asia Congress 2026</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div>
     </div>
   </section>
 </main>
@@ -491,9 +618,11 @@
         </a>
 
         <div class="footer-contact pt-3">
-          <p>연구실 주소를 입력하세요.</p>
-          <p class="mt-3"><strong>Phone:</strong> <span>+82-00-0000-0000</span></p>
-          <p><strong>Email:</strong> <span>contact@example.com</span></p>
+          <p>06351, 81, Irwon-ro, Gangnam-gu, Seoul, Republic of Korea
+
+</p>
+          <p class="mt-3"><strong>Phone:</strong>  </p>
+          <p><strong>Email:</strong> <span>hyunae0608.jung@gmail.com</span></p>
         </div>
       </div>
 
@@ -539,6 +668,23 @@
 <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
 <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+<script>
+  document.querySelectorAll('.publication-tab').forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      document.querySelectorAll('.publication-tab').forEach(function(btn) {
+        btn.classList.remove('active');
+      });
+      document.querySelectorAll('.publication-panel').forEach(function(panel) {
+        panel.classList.remove('active');
+      });
+
+      tab.classList.add('active');
+      document.getElementById(tab.dataset.target).classList.add('active');
+    });
+  });
+</script>
+
 <script src="assets/js/main.js"></script>
 
 </body>
