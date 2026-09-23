@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Root Health | LUCID</title>
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    .research-detail-page {
+      padding: 70px 0 90px;
+      background: #fff;
+    }
+
+    .page-title {
+      color: var(--accent-color);
+      font-size: 38px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      font-family: var(--heading-font);
+    }
+
+    .title-line {
+      border: 0;
+      border-top: 2px solid #222;
+      opacity: 1;
+      margin: 0 0 55px;
+    }
+
+    .section-block {
+      margin-top: 75px;
+    }
+
+    .section-heading {
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--heading-color);
+      margin-bottom: 14px;
+    }
+
+    .section-description {
+      max-width: 980px;
+      font-size: 16px;
+      line-height: 1.85;
+      color: #555;
+      margin-bottom: 32px;
+    }
+
+    .intro-copy {
+      max-width: 980px;
+      margin-bottom: 40px;
+    }
+
+    .intro-copy h2 {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .intro-copy p {
+      font-size: 16px;
+      line-height: 1.85;
+      margin-bottom: 14px;
+    }
+
+    .cohort-note {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 9px 14px;
+      border-radius: 6px;
+      background: #f5f8fb;
+      color: #65717d;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .figure-wrap {
+      width: 100%;
+      overflow-x: auto;
+      border-radius: 10px;
+      background: #fff;
+    }
+
+    .figure-inner {
+      min-width: 1100px;
+    }
+
+    .figure-inner img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .figure-note {
+      color: #6c757d;
+      font-size: 13px;
+      margin-top: 14px;
+    }
+
+    /* Data at a Glance */
+    .stat-card {
+      height: 100%;
+      background: #fff;
+      border-radius: 10px;
+      padding: 30px 26px;
+      box-shadow: 0 8px 28px rgba(31, 67, 102, 0.08);
+      border: 1px solid #f0f2f5;
+    }
+
+    .stat-card i {
+      display: block;
+      font-size: 38px;
+      color: var(--accent-color);
+      margin-bottom: 22px;
+    }
+
+    .stat-number {
+      display: block;
+      font-size: 34px;
+      line-height: 1.15;
+      font-weight: 700;
+      color: var(--heading-color);
+      margin-bottom: 8px;
+      font-family: var(--heading-font);
+    }
+
+    .stat-label {
+      font-size: 17px;
+      font-weight: 700;
+      color: #38424c;
+      margin-bottom: 8px;
+    }
+
+    .stat-detail {
+      font-size: 13px;
+      line-height: 1.65;
+      color: #777;
+      margin: 0;
+    }
+
+    /* Data Available */
+    .data-link {
+      display: block;
+      height: 100%;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .data-card {
+      position: relative;
+      height: 100%;
+      background: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      border: 1px solid #e9edf1;
+      box-shadow: 0 6px 24px rgba(31, 67, 102, 0.06);
+      transition: 0.25s ease;
+    }
+
+    .data-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(31, 67, 102, 0.11);
+    }
+
+    .data-card i.data-icon {
+      display: block;
+      font-size: 35px;
+      color: var(--accent-color);
+      margin-bottom: 18px;
+    }
+
+    .data-card h3 {
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--heading-color);
+      margin-bottom: 10px;
+    }
+
+    .data-card p {
+      font-size: 14px;
+      line-height: 1.75;
+      color: #5e6670;
+      margin-bottom: 20px;
+    }
+
+    .data-card .view-data {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--accent-color);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .data-cutoff {
+      margin-top: 26px;
+      color: #7a828a;
+      font-size: 12px;
+    }
+
+    .light-section {
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      padding: 70px max(0px, calc((100vw - 1320px) / 2));
+      background: #f7f9fb;
+    }
+
+    @media (max-width: 1399px) {
+      .light-section {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .page-title {
+        font-size: 31px;
+      }
+
+      .intro-copy h2,
+      .section-heading {
+        font-size: 25px;
+      }
+
+      .stat-number {
+        font-size: 29px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header id="header" class="header sticky-top">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-start">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center">
+            <a href="mailto:hyunae0608@gmail.com">hyunae0608@gmail.com</a>
+          </i>
+
+          <i class="bi bi-phone d-flex align-items-center ms-4">
+            <span>+82-00-0000-0000</span>
+          </i>
+        </div>
+      </div>
+    </div>
+
+    <div class="branding d-flex align-items-center">
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <h1 class="sitename">LUCID</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+
+            <li><a href="intro.html">Intro</a></li>
+
+            <li class="dropdown">
+              <a href="#" class="active">
+                <span>Research</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i>
+              </a>
+
+              <ul>
+                <li><a href="research-overview.html">Overview</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="root-health.html" class="active">Root Health</a></li>
+                <li><a href="radar.html" >RADAR</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#">
+                <span>People</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i>
+              </a>
+
+              <ul>
+                <li><a href="professor.html">Professor</a></li>
+                <li><a href="members.html">Members</a></li>
+              </ul>
+            </li>
+
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="patient.html">Patient</a></li>
+            <li><a href="activity.html">Activity</a></li>
+
+          </ul>
+
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <a class="cta-btn d-none d-sm-block" href="index.html#contact">
+          Contact Us
+        </a>
+
+      </div>
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <section class="research-detail-page">
+
+      <div class="container">
+
+        <h1 class="page-title">ROOT HEALTH</h1>
+        <hr class="title-line">
+
+        <!-- Introduction -->
+        <div class="intro-copy" data-aos="fade-up">
+
+          <h2>What is ROOT HEALTH?</h2>
+
+          <p>
+            ROOT HEALTH is a research-ready oncology data platform that integrates
+            longitudinal real-world clinical information for cancer research.
+            It brings together registry information, patient characteristics,
+            follow-up and outcomes, diagnosis and staging, molecular testing,
+            treatment history, imaging, outpatient follow-up, and laboratory data.
+          </p>
+
+          <p>
+            The current NSCLC cohort includes patients who received cancer-directed
+            treatment at Samsung Medical Center and is designed to support
+            longitudinal, multimodal clinical research and AI development.
+          </p>
+
+          <div class="cohort-note">
+            <strong>Cohort definition:</strong>
+            38,154 patients with NSCLC, excluding stage 0, who received
+            cancer-directed treatment at Samsung Medical Center.
+            <strong>Data cutoff:</strong> September 18, 2026.
+          </div>
+
+        </div>
+
+
+        <!-- Platform Figure -->
+        <div class="section-block" data-aos="fade-up">
+
+          <h2 class="section-heading">ROOT HEALTH Platform</h2>
+
+          <p class="section-description">
+            ROOT HEALTH organizes routinely generated real-world data into a
+            research-ready infrastructure for disease-specific cohort generation,
+            longitudinal analysis, and multimodal AI research.
+          </p>
+
+          <div class="figure-wrap">
+            <div class="figure-inner">
+              <img
+                src="assets/img/root-health-platform.png"
+                alt="ROOT HEALTH Platform">
+            </div>
+          </div>
+
+          <p class="figure-note">
+            ROOT HEALTH platform overview.
+          </p>
+
+        </div>
+
+
+        <!-- Data at a Glance -->
+        <div class="section-block light-section" data-aos="fade-up">
+
+          <div class="container">
+
+            <h2 class="section-heading">Data at a Glance</h2>
+
+            <p class="section-description">
+              Key data volumes currently available in the ROOT HEALTH NSCLC cohort.
+            </p>
+
+            <div class="row gy-4">
+
+              <div class="col-xl-3 col-md-6">
+                <div class="stat-card">
+                  <i class="bi bi-people"></i>
+                  <span class="stat-number">38,154</span>
+                  <div class="stat-label">NSCLC Patients</div>
+                  <p class="stat-detail">
+                    Excluding stage 0; patients received cancer-directed treatment at SMC.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-md-6">
+                <div class="stat-card">
+                  <i class="bi bi-images"></i>
+                  <span class="stat-number">692,312</span>
+                  <div class="stat-label">Imaging Examinations</div>
+                  <p class="stat-detail">
+                    Chest CT 500,919 · Brain MRI 117,756 · PET 73,637
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-md-6">
+                <div class="stat-card">
+                  <i class="bi bi-hospital"></i>
+                  <span class="stat-number">1,298,103</span>
+                  <div class="stat-label">OPD Visits</div>
+                  <p class="stat-detail">
+                    38,154 patients with OPD follow-up · mean 34.0 visits/patient
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-md-6">
+                <div class="stat-card">
+                  <i class="bi bi-clipboard2-pulse"></i>
+                  <span class="stat-number">16,649,133</span>
+                  <div class="stat-label">Laboratory Tests</div>
+                  <p class="stat-detail">
+                    Tests performed after NSCLC diagnosis; 37,920 patients ·
+                    mean 439.1 tests/patient
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Data Available -->
+        <div class="section-block" data-aos="fade-up">
+
+          <h2 class="section-heading">Data Available in ROOT HEALTH</h2>
+
+          <p class="section-description">
+            Explore the major data components summarized in the current ROOT HEALTH
+            clinical-variable workbook. Each section will be presented on a separate
+            page with the original variables and counts organized into readable tables.
+          </p>
+
+          <div class="row gy-4">
+
+            <!-- Clinical Variables -->
+            <div class="col-lg-6">
+
+              <a class="data-link" href="root-health-clinical.html">
+
+                <div class="data-card">
+
+                  <i class="bi bi-database data-icon"></i>
+
+                  <h3>Clinical Variables</h3>
+
+                  <p>
+                    Registry/common information, demographics, clinical trial
+                    participation, cohort classification, visits and follow-up,
+                    body measurements, vital status, recurrence, metastasis,
+                    survival outcomes, medical history, ECOG performance status,
+                    diagnosis, TNM staging, molecular examinations, and treatment history.
+                  </p>
+
+                  <span class="view-data">
+                    View clinical variables
+                    <i class="bi bi-arrow-right"></i>
+                  </span>
+
+                </div>
+
+              </a>
+
+            </div>
+
+
+            <!-- Genomic and Biomarker -->
+            <div class="col-lg-6">
+
+              <a class="data-link" href="root-health-biomarker.html">
+
+                <div class="data-card">
+
+                  <i class="bi bi-diagram-3 data-icon"></i>
+
+                  <h3>Genomic &amp; Biomarker Data</h3>
+
+                  <p>
+                    Testing coverage and test volumes for EGFR, ALK, PD-L1,
+                    BRAF V600E, RAS, ROS1, NTRK, HER2, MET exon 14 skipping,
+                    HER2 IHC, MET IHC/FISH, and overall NGS testing.
+                  </p>
+
+                  <span class="view-data">
+                    View biomarker data
+                    <i class="bi bi-arrow-right"></i>
+                  </span>
+
+                </div>
+
+              </a>
+
+            </div>
+
+
+            <!-- Annual Biomarker Testing -->
+            <div class="col-lg-6">
+
+              <a class="data-link" href="root-health-annual-biomarker.html">
+
+                <div class="data-card">
+
+                  <i class="bi bi-graph-up data-icon"></i>
+
+                  <h3>Annual Biomarker Testing</h3>
+
+                  <p>
+                    Diagnosis-year-specific testing trends from 2008 through 2026,
+                    including the number and percentage of patients tested for
+                    EGFR, ALK, PD-L1, and NGS.
+                  </p>
+
+                  <span class="view-data">
+                    View annual testing data
+                    <i class="bi bi-arrow-right"></i>
+                  </span>
+
+                </div>
+
+              </a>
+
+            </div>
+
+
+            <!-- Imaging, Follow-up & Labs -->
+            <div class="col-lg-6">
+
+              <a class="data-link" href="root-health-imaging-followup.html">
+
+                <div class="data-card">
+
+                  <i class="bi bi-activity data-icon"></i>
+
+                  <h3>Imaging, Follow-up &amp; Laboratory Data</h3>
+
+                  <p>
+                    Imaging volumes for Chest CT, Brain MRI, and PET;
+                    outpatient follow-up metrics; and 25 laboratory test types
+                    including blood counts, chemistry, coagulation, inflammatory
+                    markers, CEA, and renal-function measurements.
+                  </p>
+
+                  <span class="view-data">
+                    View imaging, follow-up &amp; lab data
+                    <i class="bi bi-arrow-right"></i>
+                  </span>
+
+                </div>
+
+              </a>
+
+            </div>
+
+          </div>
+
+          <p class="data-cutoff">
+            Data cutoff: September 18, 2026.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer light-background">
+    <div class="container footer-top">
+      <div class="row gy-4">
+
+        <div class="col-lg-6 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">LUCID</span>
+          </a>
+
+          <div class="footer-contact pt-3">
+            <p>연구실 주소를 입력하세요.</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+82-00-0000-0000</span></p>
+            <p><strong>Email:</strong> <span>hyunae0608@gmail.com</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="intro.html">Intro</a></li>
+            <li><a href="research-overview.html">Research</a></li>
+            <li><a href="professor.html">Professor</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="patient.html">Patient</a></li>
+            <li><a href="activity.html">Activity</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>
+        © <span>Copyright</span>
+        <strong class="px-1 sitename">LUCID</strong>
+        <span>All Rights Reserved</span>
+      </p>
+
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Distributed by <a href="https://themewagon.com/">ThemeWagon</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top"
+     class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

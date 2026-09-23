@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Intro | LUCID</title>
+  <meta name="description" content="Research laboratory introduction">
+  <meta name="keywords" content="research, laboratory, healthcare, AI">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Intro page only -->
+  <style>
+    .intro-page {
+      padding: 70px 0 90px;
+      background: #fff;
+    }
+
+    .intro-title {
+      color: var(--accent-color);
+      font-size: 38px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      font-family: var(--heading-font);
+    }
+
+    .intro-title-line {
+      border: 0;
+      border-top: 2px solid #222;
+      opacity: 1;
+      margin: 0 0 60px;
+    }
+
+    .intro-image img {
+      width: 100%;
+      border-radius: 8px;
+      display: block;
+    }
+
+    .intro-content h2 {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .intro-content p {
+      line-height: 1.8;
+      font-size: 16px;
+      margin-bottom: 18px;
+    }
+
+    .intro-section {
+      margin-top: 75px;
+    }
+
+    .intro-section-title {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 25px;
+      color: var(--heading-color);
+    }
+
+    .journey-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.journey-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-width: 1000px;
+}
+
+    /* =========================
+       Milestone
+       ========================= */
+    .milestone-wrapper {
+      position: relative;
+      width: 100%;
+      margin-top: 20px;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .milestone-img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /*
+      투명 링크를 이미지의 Key Publications 버튼 위에 올립니다.
+      이미지가 반응형으로 줄어들어도 % 좌표이기 때문에 함께 이동합니다.
+    */
+.publication-hotspot {
+  position: absolute;
+  display: block;
+  z-index: 5;
+
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  outline: none;
+
+  cursor: pointer;
+}
+
+.publication-hotspot:hover,
+.publication-hotspot:focus {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+    /* 사용자가 올린 milestone.png(1562x962) 기준 좌표 */
+    .pub-2020 {
+      left: 10.4%;
+      top: 64.6%;
+      width: 10.1%;
+      height: 4.6%;
+    }
+
+    .pub-2022 {
+      left: 62.4%;
+      top: 36.0%;
+      width: 9.5%;
+      height: 4.2%;
+    }
+
+    .pub-2023 {
+      left: 77.9%;
+      top: 48.9%;
+      width: 9.7%;
+      height: 4.3%;
+    }
+
+    .pub-2024 {
+      left: 62.0%;
+      top: 63.0%;
+      width: 9.9%;
+      height: 4.2%;
+    }
+
+    .pub-2026 {
+      left: 62.0%;
+      top: 84.7%;
+      width: 9.9%;
+      height: 4.6%;
+    }
+
+    /* =========================
+       Research Direction
+       ========================= */
+    .intro-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 30px;
+      height: 100%;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+    }
+
+    .intro-card i {
+      font-size: 34px;
+      color: var(--accent-color);
+      margin-bottom: 18px;
+    }
+
+    .intro-card h4 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .intro-card p {
+      margin: 0;
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .vision-text {
+      font-size: 17px;
+      line-height: 1.9;
+      max-width: 950px;
+    }
+
+    @media (max-width: 991px) {
+      .intro-title-line {
+        margin-bottom: 40px;
+      }
+
+      .intro-content {
+        margin-top: 10px;
+      }
+
+      .intro-section {
+        margin-top: 60px;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .intro-title {
+        font-size: 31px;
+      }
+
+      .intro-content h2 {
+        font-size: 25px;
+      }
+
+      .intro-section-title {
+        font-size: 23px;
+      }
+
+      /*
+        모바일에서도 링크 영역은 유지됩니다.
+        다만 그림이 작아지기 때문에 확대해서 보는 편이 편합니다.
+      */
+      .milestone-wrapper {
+        overflow-x: auto;
+      }
+
+      .milestone-inner {
+        position: relative;
+        min-width: 900px;
+      }
+    }
+  </style>
+
+  <!-- =======================================================
+  * Template Name: Medilab
+  * Template URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header id="header" class="header sticky-top">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-start">
+        <div class="contact-info d-flex align-items-center">
+
+          <i class="bi bi-envelope d-flex align-items-center">
+            <a href="mailto:hyunae0608@gmail.com">hyunae0608@gmail.com</a>
+          </i>
+
+          <i class="bi bi-phone d-flex align-items-center ms-4">
+            <span>+82-00-0000-0000</span>
+          </i>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="branding d-flex align-items-center">
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+
+        <!-- Lab name = Home -->
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <h1 class="sitename">LUCID</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+
+            <li>
+              <a href="intro.html" class="active">Intro</a>
+            </li>
+
+            <li class="dropdown">
+              <a href="#">
+                <span>Research</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i>
+              </a>
+
+              <ul>
+                <li><a href="research-overview.html">Overview</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="root-health.html">Root Health</a></li>
+                <li><a href="radar.html">RADAR</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#">
+                <span>People</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i>
+              </a>
+
+              <ul>
+                <li><a href="professor.html">Professor</a></li>
+                <li><a href="members.html">Members</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="publications.html">Publications</a>
+            </li>
+
+            <li>
+              <a href="patient.html">Patient</a>
+            </li>
+
+            <li>
+              <a href="activity.html">Activity</a>
+            </li>
+
+          </ul>
+
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <!-- Home의 Contact 섹션으로 이동 -->
+        <a class="cta-btn d-none d-sm-block" href="index.html#contact">
+          Contact Us
+        </a>
+
+      </div>
+    </div>
+
+  </header>
+  <!-- /Header -->
+
+
+  <main class="main">
+
+    <section class="intro-page">
+
+      <div class="container">
+
+        <h1 class="intro-title">INTRO</h1>
+        <hr class="intro-title-line">
+
+
+        <!-- About Our Lab -->
+        <div class="row align-items-center gy-5">
+
+          <div class="col-lg-6 intro-image" data-aos="fade-up">
+            <img
+              src="assets/img/empty.png"
+              alt="Research Lab">
+          </div>
+
+          <div class="col-lg-6 intro-content"
+               data-aos="fade-up"
+               data-aos-delay="100">
+
+            <h2>About Our Lab</h2>
+
+            
+          <p>
+            Our laboratory focuses on clinical data research and artificial intelligence
+            to support diagnosis, prognosis prediction, and treatment decision-making in cancer care.
+          </p>
+
+          <p>
+            We integrate diverse clinical information and multimodal medical data
+            to develop data-driven research frameworks and AI models
+            that can be translated into real-world clinical practice.
+          </p>
+
+          <p>
+            By closely collaborating with clinicians and researchers,
+            we aim to generate practical evidence and technologies
+            that improve patient care and clinical outcomes.
+          </p>
+          </div>
+
+<!-- Our Research Story -->
+<div class="intro-section">
+
+  <h3 class="intro-section-title">
+    Our Research Story
+  </h3>
+
+  <p class="mb-4" style="font-size:16px; line-height:1.8;">
+    Cancer care is a continuous and non-linear journey.
+    Our research follows patients across diagnosis, treatment,
+    response assessment, recurrence or progression, supportive care,
+    and long-term follow-up by integrating longitudinal,
+    multimodal clinical and genomic data.
+  </p>
+
+  <div class="journey-wrapper" data-aos="fade-up">
+
+    <img
+      src="assets/img/cancer-journey.png"
+      alt="Cancer journey and longitudinal multimodal data capture"
+      class="journey-img"
+    >
+
+  </div>
+
+</div>
+<!-- /Our Research Story -->
+
+        </div>
+
+
+        <!-- Milestone -->
+        <div class="intro-section">
+
+          <h3 class="intro-section-title">Milestone</h3>
+
+          <div class="milestone-wrapper"
+               data-aos="fade-up"
+               data-aos-delay="100">
+
+            <div class="milestone-inner">
+
+              <img
+                src="assets/img/milestone.png"
+                alt="ROOT HEALTH Research Milestone"
+                class="milestone-img">
+
+              <!--
+                중요:
+                아래 href의 # 부분을 실제 DOI / PubMed / Journal URL로 바꾸면 됩니다.
+
+                예:
+                href="https://doi.org/10.xxxx/xxxxx"
+                href="https://pubmed.ncbi.nlm.nih.gov/12345678/"
+              -->
+
+              <!-- 2020 -->
+<a
+  href="https://doi.org/10.1016/j.lungcan.2020.05.033"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="publication-hotspot pub-2020"
+  aria-label="Open 2020 key publication">
+</a>
+
+<!-- 2022 -->
+<a
+  href="#"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="publication-hotspot pub-2022"
+  aria-label="Open 2022 key publication">
+</a>
+
+<!-- 2023 -->
+<a
+  href="#"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="publication-hotspot pub-2023"
+  aria-label="Open 2023 key publication">
+</a>
+
+<!-- 2024 -->
+<a
+  href="#"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="publication-hotspot pub-2024"
+  aria-label="Open 2024 key publication">
+</a>
+
+<!-- 2026 -->
+<a
+  href="#"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="publication-hotspot pub-2026"
+  aria-label="Open 2026 key publication">
+</a>
+
+            </div>
+
+          </div>
+
+          <p class="mt-3 text-muted" style="font-size: 13px;">
+            * Click each <strong>Key Publications</strong> button to open the corresponding paper.
+          </p>
+
+        </div>
+        <!-- /Milestone -->
+
+
+        <!-- Research Direction -->
+        <div class="intro-section">
+
+          <h3 class="intro-section-title">Research Direction</h3>
+
+          <div class="row gy-4">
+
+            <div class="col-lg-4 col-md-6">
+              <div class="intro-card">
+                <i class="bi bi-database"></i>
+
+                <h4>Clinical Data Research</h4>
+
+                <p>
+                  We analyze real-world clinical data to understand patient characteristics,
+  treatment patterns, and clinical outcomes, and to generate new evidence
+  for cancer research and patient care.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="intro-card">
+                <i class="bi bi-cpu"></i>
+
+                <h4>Artificial Intelligence</h4>
+
+                <p>
+                  We develop machine learning and deep learning models
+  using multimodal medical data to support prediction,
+  clinical decision-making, and precision oncology.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="intro-card">
+                <i class="bi bi-heart-pulse"></i>
+
+                <h4>Precision Medicine</h4>
+
+                <p>
+                  We integrate clinical, molecular, imaging, and longitudinal data
+  to better understand individual patients and support
+  personalized treatment strategies.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <!-- /Research Direction -->
+
+
+        <!-- Vision -->
+        <div class="intro-section">
+
+          <h3 class="intro-section-title">Our Vision</h3>
+
+          <p class="vision-text">
+            Our vision is to solve real clinical problems through data and artificial intelligence,
+  and to develop practical research tools that can improve patient outcomes
+  and support precision cancer care.
+          </p>
+
+        </div>
+        <!-- /Vision -->
+
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer id="footer" class="footer light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+
+        <div class="col-lg-6 col-md-6 footer-about">
+
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">LUCID</span>
+          </a>
+
+          <div class="footer-contact pt-3">
+
+            <p>연구실 주소를 입력하세요.</p>
+
+            <p class="mt-3">
+              <strong>Phone:</strong>
+              <span>+82-00-0000-0000</span>
+            </p>
+
+            <p>
+              <strong>Email:</strong>
+              <span>hyunae0608@gmail.com</span>
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="col-lg-6 col-md-6 footer-links">
+
+          <h4>Quick Links</h4>
+
+          <ul>
+            <li><a href="intro.html">Intro</a></li>
+            <li><a href="research-overview.html">Research</a></li>
+            <li><a href="professor.html">Professor</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="patient.html">Patient</a></li>
+            <li><a href="activity.html">Activity</a></li>
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="container copyright text-center mt-4">
+
+      <p>
+        © <span>Copyright</span>
+        <strong class="px-1 sitename">LUCID</strong>
+        <span>All Rights Reserved</span>
+      </p>
+
+      <div class="credits">
+        Designed by
+        <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Distributed by
+        <a href="https://themewagon.com/">ThemeWagon</a>
+      </div>
+
+    </div>
+
+  </footer>
+  <!-- /Footer -->
+
+
+  <!-- Scroll Top -->
+  <a href="#"
+     id="scroll-top"
+     class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

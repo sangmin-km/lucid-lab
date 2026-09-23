@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Clinical Variables | ROOT HEALTH</title>
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    body { background:#f7f9fb; }
+
+    .clinical-page {
+      padding:58px 0 90px;
+      min-height:75vh;
+      background:#f7f9fb;
+    }
+
+    .breadcrumb-line {
+      margin-bottom:24px;
+      font-size:14px;
+      color:#7a828a;
+    }
+
+    .breadcrumb-line a {
+      color:var(--accent-color);
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    .page-title {
+      color:var(--accent-color);
+      font-size:38px;
+      font-weight:700;
+      margin-bottom:14px;
+      font-family:var(--heading-font);
+    }
+
+    .page-subtitle {
+      max-width:940px;
+      color:#59636d;
+      font-size:16px;
+      line-height:1.8;
+      margin-bottom:40px;
+    }
+
+    .summary-wrap { margin-bottom:44px; }
+
+    .mini-card {
+      height:100%;
+      min-height:108px;
+      padding:20px 18px;
+      background:#fff;
+      border:1px solid #e7ebef;
+      border-radius:9px;
+      box-shadow:0 5px 18px rgba(30,61,89,.05);
+    }
+
+    .mini-number {
+      display:block;
+      font-size:27px;
+      line-height:1;
+      font-weight:700;
+      color:var(--accent-color);
+      margin-bottom:9px;
+    }
+
+    .mini-label {
+      display:block;
+      font-size:13px;
+      font-weight:600;
+      color:#4d5964;
+      line-height:1.4;
+    }
+
+    .table-panel {
+      background:#fff;
+      border-radius:10px;
+      border:1px solid #e7ebef;
+      box-shadow:0 8px 28px rgba(30,61,89,.06);
+      overflow:hidden;
+    }
+
+    .table-head {
+      padding:25px 28px 20px;
+      border-bottom:1px solid #edf0f2;
+    }
+
+    .table-head h2 {
+      font-size:24px;
+      font-weight:700;
+      margin:0 0 8px;
+    }
+
+    .table-head p {
+      color:#737b83;
+      font-size:14px;
+      margin:0;
+    }
+
+    .table-responsive { overflow-x:auto; }
+
+    .clinical-table {
+      width:100%;
+      min-width:1180px;
+      margin:0;
+      border-collapse:collapse;
+    }
+
+    .clinical-table thead th {
+      padding:15px 16px;
+      background:#eef4fa;
+      color:#334455;
+      font-size:13px;
+      font-weight:700;
+      text-align:left;
+      vertical-align:middle;
+      border-bottom:1px solid #dce5ed;
+    }
+
+    .clinical-table tbody td {
+      padding:16px;
+      vertical-align:top;
+      border-bottom:1px solid #edf0f2;
+      color:#505a63;
+      font-size:13px;
+      line-height:1.65;
+    }
+
+    .clinical-table tbody tr:last-child td { border-bottom:0; }
+    .clinical-table tbody tr:hover { background:#fbfcfd; }
+
+    .clinical-table th:nth-child(1), .clinical-table td:nth-child(1) { width:145px; }
+    .clinical-table th:nth-child(2), .clinical-table td:nth-child(2) { width:185px; }
+    .clinical-table th:nth-child(3), .clinical-table td:nth-child(3) { width:245px; }
+    .clinical-table th:nth-child(4), .clinical-table td:nth-child(4) { width:380px; }
+    .clinical-table th:nth-child(5), .clinical-table td:nth-child(5) { width:260px; }
+
+    .domain-badge {
+      display:inline-block;
+      padding:5px 9px;
+      border-radius:5px;
+      background:#eaf3fb;
+      color:#2d6fa8;
+      font-size:12px;
+      font-weight:700;
+      line-height:1.4;
+    }
+
+    .subcategory {
+      color:#29333d !important;
+      font-weight:600;
+    }
+
+    .examples {
+      color:#68737d !important;
+      font-style:italic;
+    }
+
+    .registry-note {
+      margin-top:22px;
+      padding:18px 20px;
+      border-left:3px solid var(--accent-color);
+      background:#fff;
+      color:#626d77;
+      font-size:13px;
+      line-height:1.75;
+      border-radius:0 7px 7px 0;
+    }
+
+    .back-link {
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      margin-top:30px;
+      color:var(--accent-color);
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    @media (max-width:575px) {
+      .page-title { font-size:31px; }
+      .mini-card { min-height:100px; padding:17px 14px; }
+      .mini-number { font-size:24px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header id="header" class="header sticky-top">
+  <div class="topbar d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-start">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope d-flex align-items-center">
+          <a href="mailto:hyunae0608@gmail.com">hyunae0608@gmail.com</a>
+        </i>
+        <i class="bi bi-phone d-flex align-items-center ms-4">
+          <span>+82-00-0000-0000</span>
+        </i>
+      </div>
+    </div>
+  </div>
+
+  <div class="branding d-flex align-items-center">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename">LUCID</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="intro.html">Intro</a></li>
+          <li class="dropdown">
+            <a href="#" class="active">
+              <span>Research</span>
+              <i class="bi bi-chevron-down toggle-dropdown"></i>
+            </a>
+            <ul>
+              <li><a href="research-overview.html">Overview</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="root-health.html" class="active">Root Health</a></li>
+              <li><a href="radar.html">RADAR</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#">
+              <span>People</span>
+              <i class="bi bi-chevron-down toggle-dropdown"></i>
+            </a>
+            <ul>
+              <li><a href="professor.html">Professor</a></li>
+              <li><a href="members.html">Members</a></li>
+            </ul>
+          </li>
+
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="patient.html">Patient</a></li>
+          <li><a href="activity.html">Activity</a></li>
+        </ul>
+
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="cta-btn d-none d-sm-block" href="index.html#contact">Contact Us</a>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+  <section class="clinical-page">
+    <div class="container">
+
+      <div class="breadcrumb-line">
+        <a href="root-health.html">ROOT HEALTH</a>
+        <span class="mx-2">/</span>
+        Clinical Variables
+      </div>
+
+      <h1 class="page-title">CLINICAL VARIABLES</h1>
+
+      <p class="page-subtitle">
+        ROOT HEALTH includes comprehensive longitudinal clinical data
+        covering patient characteristics, diagnosis, treatment,
+        molecular testing, follow-up, and clinical outcomes.
+      </p>
+
+      <div class="table-panel">
+        <div class="table-head">
+          <h2>Clinical Variables Available in ROOT HEALTH</h2>
+          <p>38 summarized variable groups across 7 clinical domains.</p>
+        </div>
+
+        <div class="table-responsive">
+          <table class="clinical-table">
+            <thead>
+              <tr>
+                <th>Clinical Domain</th>
+                <th>Summarized Subcategory</th>
+                <th>Data Description</th>
+                <th>Data Included / Coverage</th>
+                <th>Data Value (Examples)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+      <td><span class="domain-badge">Registry / Common</span></td>
+      <td class="subcategory">Cancer registry identifiers</td>
+      <td>Registry source and identifiers used to define each cancer case in ROOT HEALTH.</td>
+      <td>Includes whether the case is linked to cancer registration data, cancer registration year/month, registration serial number, and cohort application date. Registration year refers to the year recorded through Korea&#x27;s national cancer registration framework (Korea Central Cancer Registry, KCCR).</td>
+      <td class="examples">Source: registered / non-registered; Year: YYYY; Month: MM; Serial no.; Date: YYYY-MM-DD</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Basic Information</span></td>
+      <td class="subcategory">Patient demographics</td>
+      <td>Core demographic characteristics.</td>
+      <td>Date of birth, sex, nationality status, and residential area.</td>
+      <td class="examples">Date; M/F; Korean/foreign national; province/city/district</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Basic Information</span></td>
+      <td class="subcategory">Clinical trial participation</td>
+      <td>Participation in clinical trials.</td>
+      <td>Participation status and number of clinical trial enrollments.</td>
+      <td class="examples">Y/N; count</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Basic Information</span></td>
+      <td class="subcategory">Cohort classification</td>
+      <td>Predefined clinical/molecular cohort flags used for research-ready patient selection.</td>
+      <td>EGFR-sensitive, ALK-positive, IO, rare-mutation, CNS metastasis and cohort-exclusion classifications.</td>
+      <td class="examples">Cohort flags / predefined categories</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Basic Information</span></td>
+      <td class="subcategory">Visit / follow-up</td>
+      <td>Key hospital visit and follow-up dates.</td>
+      <td>Last follow-up, first oncology visit/admission, physician ID and last visit type.</td>
+      <td class="examples">YYYY-MM-DD; visit type; physician ID</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Basic Information</span></td>
+      <td class="subcategory">Body measurements</td>
+      <td>Integrated anthropometric measurements.</td>
+      <td>Height, weight, BMI, measurement date and source.</td>
+      <td class="examples">cm; kg; BMI; YYYY-MM-DD; source</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Follow-up &amp; Outcomes</span></td>
+      <td class="subcategory">Vital status / death</td>
+      <td>Vital status and mortality information from integrated clinical/registry sources.</td>
+      <td>Death status/date, source of death date, cause-of-death code and cause descriptions.</td>
+      <td class="examples">Y/N; YYYY-MM-DD; ICD/code; text/source</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Follow-up &amp; Outcomes</span></td>
+      <td class="subcategory">Recurrence</td>
+      <td>Post-treatment recurrence information.</td>
+      <td>Recurrence status/date/source, including local and distant relapse.</td>
+      <td class="examples">Initially/Recurred; Y/N; YYYY-MM-DD; source</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Follow-up &amp; Outcomes</span></td>
+      <td class="subcategory">Metastasis</td>
+      <td>Date, source and site-specific metastatic disease information.</td>
+      <td>Overall metastatic date plus lung-to-lung, bone, liver, adrenal, pleural, nodal and other metastatic sites.</td>
+      <td class="examples">Y/N; YYYY-MM-DD; site; source</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Follow-up &amp; Outcomes</span></td>
+      <td class="subcategory">Brain metastasis</td>
+      <td>Brain metastasis characteristics and treatment information.</td>
+      <td>Brain metastasis status/date and CNS-directed treatment information.</td>
+      <td class="examples">Y/N; YYYY-MM-DD; treatment category</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Follow-up &amp; Outcomes</span></td>
+      <td class="subcategory">Survival outcomes</td>
+      <td>Derived survival endpoints.</td>
+      <td>Overall survival (OS), disease-free survival (DFS) and progression-free survival (PFS), including event/date/time variables.</td>
+      <td class="examples">Event Y/N; date; survival time</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Medical History &amp; Status</span></td>
+      <td class="subcategory">Smoking history</td>
+      <td>Smoking exposure and status.</td>
+      <td>Smoking status and quantitative smoking history.</td>
+      <td class="examples">Never/former/current; pack-year related values</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Medical History &amp; Status</span></td>
+      <td class="subcategory">Family history</td>
+      <td>Cancer-related family history.</td>
+      <td>Family history status and related information.</td>
+      <td class="examples">Y/N / categorical</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Medical History &amp; Status</span></td>
+      <td class="subcategory">Comorbidities</td>
+      <td>Pre-existing medical conditions relevant to clinical characterization.</td>
+      <td>Multiple comorbidity indicators derived from clinical information.</td>
+      <td class="examples">Y/N / condition-specific indicators</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Medical History &amp; Status</span></td>
+      <td class="subcategory">ECOG performance status</td>
+      <td>Functional performance status.</td>
+      <td>ECOG performance status and related timing information.</td>
+      <td class="examples">ECOG 0–4; date</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Diagnosis</span></td>
+      <td class="subcategory">Diagnosis dates</td>
+      <td>Key dates defining cancer diagnosis.</td>
+      <td>Initial diagnosis and institution-specific diagnosis dates.</td>
+      <td class="examples">YYYY-MM-DD</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Diagnosis</span></td>
+      <td class="subcategory">Primary diagnosis</td>
+      <td>Primary cancer diagnosis information.</td>
+      <td>Primary diagnosis name/code.</td>
+      <td class="examples">Diagnosis code / text</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Diagnosis</span></td>
+      <td class="subcategory">Histology</td>
+      <td>Pathologic/histologic characterization of lung cancer.</td>
+      <td>Histologic diagnosis and related pathologic classification variables.</td>
+      <td class="examples">Histology category / text</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Diagnosis</span></td>
+      <td class="subcategory">Clinical TNM stage</td>
+      <td>Clinical TNM staging.</td>
+      <td>Clinical T, N, M and overall stage across applicable AJCC editions.</td>
+      <td class="examples">cT / cN / cM / Stage</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Diagnosis</span></td>
+      <td class="subcategory">Pathologic TNM stage</td>
+      <td>Pathologic TNM staging.</td>
+      <td>Pathologic T, N, M and overall stage across applicable AJCC editions.</td>
+      <td class="examples">pT / pN / pM / Stage</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Diagnosis</span></td>
+      <td class="subcategory">Multiple primary cancer</td>
+      <td>Information on synchronous/metachronous additional primary cancers.</td>
+      <td>Presence and characteristics of additional primary malignancies.</td>
+      <td class="examples">Y/N; site/diagnosis/date</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Examination</span></td>
+      <td class="subcategory">EGFR</td>
+      <td>EGFR molecular testing summarized at the gene level rather than by repeated result fields.</td>
+      <td>Initial and repeat EGFR mutation results, detailed mutation information, EMR-derived results and cell-free testing. Initial/repeat; tissue and cell-free molecular results.</td>
+      <td class="examples">Positive/negative/no mutation; mutation notation; date</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Examination</span></td>
+      <td class="subcategory">ALK</td>
+      <td>ALK testing summarized across available modalities.</td>
+      <td>ALK IHC, FISH and EMR-derived ALK results. IHC; FISH; EMR-derived result.</td>
+      <td class="examples">Positive/negative; score/result; date</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Examination</span></td>
+      <td class="subcategory">PD-L1</td>
+      <td>PD-L1 expression testing summarized across assay types.</td>
+      <td>PD-L1 results from major IHC assays. 22C3; SP263; SP142; other assay.</td>
+      <td class="examples">TPS/percentage or categorical result; date</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Examination</span></td>
+      <td class="subcategory">NGS</td>
+      <td>Next-generation sequencing information.</td>
+      <td>NGS test availability and related test/result information. NGS.</td>
+      <td class="examples">Panel/test information; date/result</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Examination</span></td>
+      <td class="subcategory">ROS1</td>
+      <td>ROS1 testing summarized across available modalities.</td>
+      <td>ROS1 PCR and IHC results. PCR; IHC.</td>
+      <td class="examples">Detected/not detected or positive/negative; date</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Examination</span></td>
+      <td class="subcategory">BRAF</td>
+      <td>BRAF molecular testing.</td>
+      <td>BRAF mutation test result and related mutation information. Molecular mutation testing.</td>
+      <td class="examples">Positive/negative; mutation notation; date</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Examination</span></td>
+      <td class="subcategory">Bronchoscopy</td>
+      <td>Bronchoscopic examination information.</td>
+      <td>Bronchoscopy procedure, timing and related examination information. Bronchoscopy.</td>
+      <td class="examples">Procedure/result/date</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Treatment</span></td>
+      <td class="subcategory">Overall treatment sequence</td>
+      <td>Longitudinal treatment history summarized as sequential treatment episodes.</td>
+      <td>Treatment type, intent, timing and related treatment information across sequential treatment records. Up to 7 sequential treatment records plus last-treatment summary.</td>
+      <td class="examples">Treatment type; date; intent; sequence</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Treatment</span></td>
+      <td class="subcategory">Surgery</td>
+      <td>Lung cancer surgical treatment history.</td>
+      <td>Surgical information including procedure-related variables and repeated operations. Up to 3 surgery episodes.</td>
+      <td class="examples">Procedure; date; surgical details</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Treatment</span></td>
+      <td class="subcategory">Salvage treatment</td>
+      <td>Salvage/local treatment after prior therapy.</td>
+      <td>Salvage treatment type and related information. Salvage treatment.</td>
+      <td class="examples">Treatment type / date</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Treatment</span></td>
+      <td class="subcategory">Neoadjuvant systemic therapy</td>
+      <td>Preoperative systemic treatment.</td>
+      <td>Regimen and treatment-course information for neoadjuvant therapy. Up to 2 neoadjuvant treatment lines/courses.</td>
+      <td class="examples">Regimen; start/end date; cycle/response-related fields</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Treatment</span></td>
+      <td class="subcategory">Adjuvant systemic therapy</td>
+      <td>Postoperative systemic treatment.</td>
+      <td>Regimen and treatment-course information for adjuvant therapy. Up to 3 adjuvant treatment lines/courses.</td>
+      <td class="examples">Regimen; start/end date; cycle/response-related fields</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Treatment</span></td>
+      <td class="subcategory">Definitive therapy</td>
+      <td>Definitive non-surgical treatment including systemic/chemoradiation-related treatment records.</td>
+      <td>Regimen and treatment-course information for definitive therapy. Up to 3 definitive treatment lines/courses.</td>
+      <td class="examples">Regimen; start/end date; treatment-related fields</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Treatment</span></td>
+      <td class="subcategory">Durvalumab</td>
+      <td>Consolidation durvalumab treatment information.</td>
+      <td>Durvalumab treatment timing and related variables. Durvalumab.</td>
+      <td class="examples">Treatment dates / treatment status</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Treatment</span></td>
+      <td class="subcategory">Palliative systemic therapy</td>
+      <td>Systemic therapy for recurrent/metastatic disease, consolidated rather than displayed line-by-line.</td>
+      <td>Regimen, dates and treatment-course information for each palliative line. Up to 11 palliative lines (1L–11L).</td>
+      <td class="examples">Line; regimen; start/end date; cycle/response-related fields</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Treatment</span></td>
+      <td class="subcategory">Targeted / immunotherapy exposure</td>
+      <td>Therapy-specific summary variables across treatment history.</td>
+      <td>EGFR TKI, ALK TKI, PD-(L)1 inhibitor and other TKI exposure. EGFR TKI; ALK TKI; PD-(L)1 inhibitor; other TKI.</td>
+      <td class="examples">Y/N; line(s); treatment information</td>
+    </tr>
+<tr>
+      <td><span class="domain-badge">Treatment</span></td>
+      <td class="subcategory">Sequential chemoradiotherapy</td>
+      <td>Sequential chemotherapy/radiotherapy treatment information.</td>
+      <td>Treatment sequence and related chemoradiotherapy variables. Sequential CRT.</td>
+      <td class="examples">Treatment type; date; sequence</td>
+    </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="registry-note">
+        <strong>Registry note.</strong>
+        Korea's national cancer registration program is coordinated through the Korea Central Cancer Registry (KCCR),
+        a nationwide cancer registration program operated under the National Cancer Center.
+        In this summary, “cancer registration year” refers to the year recorded for the cancer case in that registration framework.
+      </div>
+
+      <a href="root-health.html" class="back-link">
+        <i class="bi bi-arrow-left"></i>
+        Back to ROOT HEALTH
+      </a>
+
+    </div>
+  </section>
+</main>
+
+<footer id="footer" class="footer light-background">
+  <div class="container footer-top">
+    <div class="row gy-4">
+
+      <div class="col-lg-6 col-md-6 footer-about">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <span class="sitename">LUCID</span>
+        </a>
+
+        <div class="footer-contact pt-3">
+          <p>연구실 주소를 입력하세요.</p>
+          <p class="mt-3"><strong>Phone:</strong> <span>+82-00-0000-0000</span></p>
+          <p><strong>Email:</strong> <span>hyunae0608@gmail.com</span></p>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-6 footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="intro.html">Intro</a></li>
+          <li><a href="research-overview.html">Research</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="professor.html">Professor</a></li>
+          <li><a href="members.html">Members</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="patient.html">Patient</a></li>
+          <li><a href="activity.html">Activity</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container copyright text-center mt-4">
+    <p>
+      © <span>Copyright</span>
+      <strong class="px-1 sitename">LUCID</strong>
+      <span>All Rights Reserved</span>
+    </p>
+
+    <div class="credits">
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      Distributed by <a href="https://themewagon.com/">ThemeWagon</a>
+    </div>
+  </div>
+</footer>
+
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+  <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<div id="preloader"></div>
+
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

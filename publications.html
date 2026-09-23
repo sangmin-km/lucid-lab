@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Publications | LUCID</title>
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+<style>
+  body {
+    background:#f7f8fa;
+  }
+
+  .page-wrap {
+    padding:70px 0 90px;
+    background:#f7f8fa;
+    min-height:70vh;
+  }
+
+  .page-title {
+    color:var(--accent-color);
+    font-size:38px;
+    font-weight:700;
+    margin-bottom:18px;
+    font-family:var(--heading-font);
+  }
+
+  .title-line {
+    border:0;
+    border-top:2px solid #222;
+    opacity:1;
+    margin:0 0 55px;
+  }
+
+  .year-title {
+    font-size:31px;
+    font-weight:500;
+    color:#4e555c;
+    margin:45px 0 18px;
+  }
+
+  .year-title:first-of-type {
+    margin-top:0;
+  }
+
+  .publication-item {
+    background:#fff;
+    border-radius:10px;
+    border:1px solid #eceff2;
+    margin-bottom:16px;
+    overflow:hidden;
+  }
+
+  .publication-button {
+    width:100%;
+    background:#fff;
+    border:0;
+    text-align:left;
+    padding:24px 28px;
+    display:grid;
+    grid-template-columns:52px 1fr 24px;
+    gap:18px;
+    align-items:start;
+  }
+
+  .publication-button:hover {
+    background:#fbfcfd;
+  }
+
+  .publication-number {
+    color:#888;
+    font-size:14px;
+    padding-top:3px;
+  }
+
+  .publication-type {
+    display:inline-block;
+    background:#78a7d8;
+    color:#fff;
+    border-radius:4px;
+    font-size:12px;
+    letter-spacing:.04em;
+    padding:5px 9px;
+    margin-bottom:11px;
+  }
+
+  .publication-title {
+    font-size:21px;
+    line-height:1.45;
+    font-weight:600;
+    color:#1f2328;
+    margin:0 0 8px;
+  }
+
+  .publication-meta {
+    font-size:14px;
+    color:#6c757d;
+    margin:0;
+  }
+
+  .publication-icon {
+    color:#6c757d;
+    font-size:18px;
+    transition:transform .2s ease;
+    margin-top:6px;
+  }
+
+  .publication-button[aria-expanded="true"] .publication-icon {
+    transform:rotate(180deg);
+  }
+
+  .publication-detail {
+    border-top:1px solid #edf0f2;
+    padding:28px;
+    background:#fcfcfd;
+  }
+
+  .detail-grid {
+    display:grid;
+    grid-template-columns:170px 1fr;
+    gap:14px 22px;
+    margin-bottom:28px;
+  }
+
+  .detail-label {
+    font-weight:700;
+    color:#2d3439;
+  }
+
+  .detail-value {
+    color:#555;
+    line-height:1.7;
+  }
+
+  .abstract-title,
+  .keywords-title {
+    font-size:18px;
+    font-weight:700;
+    margin:24px 0 10px;
+  }
+
+  .abstract-text {
+    font-size:15px;
+    line-height:1.85;
+    color:#4f555a;
+    margin-bottom:0;
+  }
+
+  .keyword-list {
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+
+  .keyword {
+    background:color-mix(in srgb, var(--accent-color), transparent 90%);
+    color:var(--accent-color);
+    border-radius:999px;
+    padding:7px 12px;
+    font-size:13px;
+  }
+
+  .doi-link {
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-weight:600;
+    text-decoration:none;
+  }
+
+  .doi-link:hover {
+    text-decoration:underline;
+  }
+
+  .lab-subtitle {
+    font-size:12px;
+    font-weight:500;
+    color:#6c757d;
+    letter-spacing:.3px;
+    margin-top:2px;
+    line-height:1.2;
+  }
+
+  @media (max-width:767px) {
+    .publication-button {
+      grid-template-columns:36px 1fr 20px;
+      padding:20px;
+      gap:10px;
+    }
+
+    .publication-title {
+      font-size:18px;
+    }
+
+    .detail-grid {
+      grid-template-columns:1fr;
+      gap:4px;
+    }
+
+    .publication-detail {
+      padding:22px 20px;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<header id="header" class="header sticky-top">
+  <div class="topbar d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-start">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope d-flex align-items-center">
+          <a href="mailto:contact@example.com">contact@example.com</a>
+        </i>
+        <i class="bi bi-phone d-flex align-items-center ms-4">
+          <span>+82-00-0000-0000</span>
+        </i>
+      </div>
+    </div>
+  </div>
+
+  <div class="branding d-flex align-items-center">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex flex-column align-items-start me-auto">
+        <h1 class="sitename mb-0">LUCID</h1>
+        <span class="lab-subtitle">Lung Cancer Intelligence &amp; Data Lab</span>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="intro.html">Intro</a></li>
+
+          <li class="dropdown">
+            <a href="#"><span>Research</span><i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="research-overview.html">Overview</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="root-health.html">Root Health</a></li>
+              <li><a href="radar.html">RADAR</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#"><span>People</span><i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="professor.html">Professor</a></li>
+              <li><a href="members.html">Members</a></li>
+            </ul>
+          </li>
+
+          <li><a href="publications.html" class="active">Publications</a></li>
+          <li><a href="patient.html">Patient</a></li>
+          <li><a href="activity.html">Activity</a></li>
+        </ul>
+
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="cta-btn d-none d-sm-block" href="index.html#contact">Contact Us</a>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+  <section class="page-wrap">
+    <div class="container">
+
+      <h1 class="page-title">PUBLICATIONS</h1>
+      <hr class="title-line">
+
+      <h2 class="year-title">2026</h2>
+
+      <div class="publication-item" data-aos="fade-up">
+
+        <button
+          class="publication-button"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#publication-2026-1"
+          aria-expanded="false"
+          aria-controls="publication-2026-1">
+
+          <div class="publication-number">01</div>
+
+          <div>
+            <span class="publication-type">Article</span>
+
+            <h3 class="publication-title">
+              Treatment patterns and clinical outcomes in real-world patients with small-cell lung cancer in South Korea: A single-center experience
+            </h3>
+
+            <p class="publication-meta">
+              International Journal of Cancer · August 2026 · 159(3): 719–728
+            </p>
+          </div>
+
+          <i class="bi bi-chevron-down publication-icon"></i>
+        </button>
+
+        <div class="collapse" id="publication-2026-1">
+          <div class="publication-detail">
+
+            <div class="detail-grid">
+              <div class="detail-label">Authors</div>
+              <div class="detail-value">
+                Park, Sehhoon; Kang, Danbee; Lee, Jin; Jung, Hyun Ae; Sun, Jong-Mu;
+                Lee, Se-Hoon; Ahn, Jin Seok; Lee, Hojoon; Lim, Hyuna; Pundole, Xerxes;
+                Cho, Juhee; Ahn, Myung-Ju
+              </div>
+
+              <div class="detail-label">Journal</div>
+              <div class="detail-value">International Journal of Cancer</div>
+
+              <div class="detail-label">Publication Date</div>
+              <div class="detail-value">August 2026</div>
+
+              <div class="detail-label">Volume / Issue / Pages</div>
+              <div class="detail-value">159 / 3 / 719–728</div>
+
+              <div class="detail-label">DOI</div>
+              <div class="detail-value">
+                <a class="doi-link"
+                   href="https://doi.org/10.1002/ijc.70449"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                  10.1002/ijc.70449
+                  <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+
+            <h4 class="abstract-title">Abstract</h4>
+
+            <p class="abstract-text">
+              We examined treatment patterns and overall survival (OS) among patients with small-cell lung cancer (SCLC) in South Korea.
+              This retrospective cohort study included patients with SCLC treated at Samsung Medical Center between January 1, 2018 and
+              December 31, 2021, with follow-up through March 13, 2023. The first systemic therapy after initial diagnosis was defined as
+              first-line, with subsequent lines identified by initiation of new regimens. Survival outcomes were estimated from the start
+              of each treatment line. Among 515 patients, 343 had extensive-stage (ES) and 172 had limited-stage (LS) at diagnosis.
+              Platinum-based regimen without anti-PD-L1 was the most common first-line regimen for both groups; however, use of anti-PD-L1
+              containing platinum regimens increased markedly from 2020 onward in patients with ES-SCLC. In the second line setting, 64%
+              of patients with ES-SCLC received platinum-based therapy and 31% irinotecan monotherapy, whereas taxanes were predominantly
+              used in patients with LS-SCLC (51.7%). Median OS for ES-SCLC following first-line treatment was 11.3 months (95% CI: 9.7, 12.2)
+              [11.4 months (95% CI: 9.6, 12.8) with anti-PD-L1 vs. 11.1 months (95% CI: 9.2, 12.5) without], and 29.8 months
+              (95% CI: 23.6, 46.6) months following first definitive therapy for LS-SCLC. Median OS declined to 6.9 months
+              (95% CI: 6.3, 7.9) after second line therapy in ES-SCLC and 12.1 months (95% CI: 7.9, 17.1) in patients with LS-SCLC following
+              1L therapy after initial definitive therapy. These findings characterize the evolving SCLC treatment landscape, underscore
+              the limited effectiveness of current treatment options, and highlight the persistent poor prognosis in this population.
+            </p>
+
+            <h4 class="keywords-title">Keywords</h4>
+
+            <div class="keyword-list">
+              <span class="keyword">anti-PD-L1 therapy</span>
+              <span class="keyword">extensive stage</span>
+              <span class="keyword">overall survival</span>
+              <span class="keyword">retrospective</span>
+              <span class="keyword">small-cell lung cancer</span>
+              <span class="keyword">chemotherapy</span>
+              <span class="keyword">survival</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <h2 class="year-title">2025</h2>
+
+      <div class="publication-item" data-aos="fade-up">
+
+        <button
+          class="publication-button"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#publication-2025-1"
+          aria-expanded="false"
+          aria-controls="publication-2025-1">
+
+          <div class="publication-number">01</div>
+
+          <div>
+            <span class="publication-type">Article</span>
+
+            <h3 class="publication-title">
+              Deep-Learning Model for Real-Time Prediction of Recurrence in Early-Stage Non–Small Cell Lung Cancer: A Multimodal Approach (RADAR CARE Study)
+            </h3>
+
+            <p class="publication-meta">
+              JCO Precision Oncology · July 2025 · 9:e2500172
+            </p>
+          </div>
+
+          <i class="bi bi-chevron-down publication-icon"></i>
+        </button>
+
+        <div class="collapse" id="publication-2025-1">
+          <div class="publication-detail">
+
+            <div class="detail-grid">
+
+              <div class="detail-label">Authors</div>
+              <div class="detail-value">
+                Jung, Hyun Ae; Lee, Daehwan; Park, Boram; Lee, Kiwon; Lee, Ho Yun;
+                Kim, Tae Jung; Jeon, Yeong Jeong; Lee, Junghee; Park, Seong Yong;
+                Cho, Jong Ho; Choi, Yong Soo; Park, Sehhoon; Sun, Jong-Mu;
+                Lee, Se-Hoon; Ahn, Jin Seok; Ahn, Myung-Ju; Kim, Hong Kwan
+              </div>
+
+              <div class="detail-label">Journal</div>
+              <div class="detail-value">JCO Precision Oncology</div>
+
+              <div class="detail-label">Publication Date</div>
+              <div class="detail-value">July 23, 2025</div>
+
+              <div class="detail-label">Volume / Article</div>
+              <div class="detail-value">9 / e2500172</div>
+
+              <div class="detail-label">DOI</div>
+              <div class="detail-value">
+                <a class="doi-link"
+                   href="https://doi.org/10.1200/PO-25-00172"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                  10.1200/PO-25-00172
+                  <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+              </div>
+
+            </div>
+
+            <h4 class="abstract-title">Abstract</h4>
+
+            <p class="abstract-text">
+              The surveillance protocol for early-stage non–small cell lung cancer (NSCLC) is not contingent upon individualized
+              risk factors for recurrence. This study aimed to use comprehensive data from clinical practice to develop a
+              deep-learning model for practical longitudinal monitoring. A multimodal deep-learning model with transformers
+              was developed for real-time recurrence prediction using baseline clinical, pathological, and molecular data
+              with longitudinal laboratory and radiologic data collected during surveillance. Patients with NSCLC
+              (stage I to III) who underwent surgery with curative intent between January 2008 and September 2022 were included.
+              The primary outcome was predicting recurrence within 1 year after the monitoring point. A total of 14,177 patients
+              were enrolled. The model incorporated 64 clinical-pathological-molecular factors at baseline, together with
+              longitudinal laboratory data and CT imaging interpretation data. The AUC for predicting relapse within 1 year
+              was 0.854 across all stages, with a sensitivity of 86.0% and specificity of 71.3%. This pilot study demonstrates
+              the timely provision of RADAR risk scores for recurrence prediction and supports their potential use in
+              risk-adapted surveillance and adjuvant treatment strategies.
+            </p>
+
+            <h4 class="keywords-title">Study Highlights</h4>
+
+            <div class="keyword-list">
+              <span class="keyword">RADAR CARE</span>
+              <span class="keyword">NSCLC</span>
+              <span class="keyword">recurrence prediction</span>
+              <span class="keyword">multimodal AI</span>
+              <span class="keyword">transformer</span>
+              <span class="keyword">longitudinal data</span>
+              <span class="keyword">precision oncology</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer id="footer" class="footer light-background">
+  <div class="container footer-top">
+    <div class="row gy-4">
+      <div class="col-lg-6 col-md-6 footer-about">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <span class="sitename">LUCID</span>
+        </a>
+
+        <div class="footer-contact pt-3">
+          <p>연구실 주소를 입력하세요.</p>
+          <p class="mt-3"><strong>Phone:</strong> <span>+82-00-0000-0000</span></p>
+          <p><strong>Email:</strong> <span>contact@example.com</span></p>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-6 footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="intro.html">Intro</a></li>
+          <li><a href="research-overview.html">Research</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="professor.html">Professor</a></li>
+          <li><a href="members.html">Members</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="patient.html">Patient</a></li>
+          <li><a href="activity.html">Activity</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container copyright text-center mt-4">
+    <p>
+      © <span>Copyright</span>
+      <strong class="px-1 sitename">LUCID</strong>
+      <span>All Rights Reserved</span>
+    </p>
+
+    <div class="credits">
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      Distributed by <a href="https://themewagon.com/">ThemeWagon</a>
+    </div>
+  </div>
+</footer>
+
+<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+  <i class="bi bi-arrow-up-short"></i>
+</a>
+
+<div id="preloader"></div>
+
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

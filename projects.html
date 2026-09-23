@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Projects | Research Lab</title>
+  <meta name="description" content="Ongoing research projects">
+  <meta name="keywords" content="research projects, NSCLC, multimodal AI, RADAR CARE">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: #f7f8fa;
+    }
+
+    .page-wrap {
+  background: #fff;
+}
+
+.publication-item {
+  border: 1px solid #dddddd;
+}
+
+    .page-title {
+      color: var(--accent-color);
+      font-size: 38px;
+      font-weight: 700;
+      margin-bottom: 18px;
+      font-family: var(--heading-font);
+    }
+
+    .title-line {
+      border: 0;
+      border-top: 2px solid #222;
+      opacity: 1;
+      margin: 0 0 55px;
+    }
+
+    .section-title-small {
+      font-size: 31px;
+      font-weight: 500;
+      color: #4e555c;
+      margin-bottom: 18px;
+    }
+
+    .project-item {
+      background: #fff;
+      border-radius: 10px;
+      border: 1px solid #eceff2;
+      margin-bottom: 16px;
+      overflow: hidden;
+    }
+
+    .project-button {
+      width: 100%;
+      background: #fff;
+      border: 0;
+      text-align: left;
+      padding: 26px 28px;
+      display: grid;
+      grid-template-columns: 52px 1fr 24px;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .project-button:hover {
+      background: #fbfcfd;
+    }
+
+    .project-number {
+      color: #888;
+      font-size: 14px;
+      padding-top: 3px;
+    }
+
+    .project-type {
+      display: inline-block;
+      background: #78a7d8;
+      color: #fff;
+      border-radius: 4px;
+      font-size: 12px;
+      letter-spacing: .04em;
+      padding: 5px 9px;
+      margin-bottom: 11px;
+    }
+
+    .project-title {
+      font-size: 21px;
+      line-height: 1.45;
+      font-weight: 600;
+      color: #1f2328;
+      margin: 0 0 8px;
+    }
+
+    .project-subtitle {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #58616a;
+      margin: 0 0 12px;
+    }
+
+    .project-meta {
+      font-size: 14px;
+      color: #6c757d;
+      margin: 0;
+    }
+
+    .project-icon {
+      color: #6c757d;
+      font-size: 18px;
+      transition: transform .2s ease;
+      margin-top: 6px;
+    }
+
+    .project-button[aria-expanded="true"] .project-icon {
+      transform: rotate(180deg);
+    }
+
+    .project-detail {
+      border-top: 1px solid #edf0f2;
+      padding: 28px;
+      background: #fcfcfd;
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 14px 22px;
+    }
+
+    .detail-label {
+      font-weight: 700;
+      color: #2d3439;
+    }
+
+    .detail-value {
+      color: #555;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 767px) {
+      .project-button {
+        grid-template-columns: 36px 1fr 20px;
+        padding: 20px;
+        gap: 10px;
+      }
+
+      .project-title {
+        font-size: 18px;
+      }
+
+      .project-detail {
+        padding: 22px 20px;
+      }
+
+      .detail-grid {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header id="header" class="header sticky-top">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-start">
+        <div class="contact-info d-flex align-items-center">
+
+          <i class="bi bi-envelope d-flex align-items-center">
+            <a href="mailto:hyunae0608@gmail.com">hyunae0608@gmail.com</a>
+          </i>
+
+          <i class="bi bi-phone d-flex align-items-center ms-4">
+            <span>+82-00-0000-0000</span>
+          </i>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="branding d-flex align-items-center">
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <h1 class="sitename">LUCID</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+
+            <li><a href="intro.html">Intro</a></li>
+
+            <li class="dropdown">
+              <a href="#" class="active">
+                <span>Research</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i>
+              </a>
+
+              <ul>
+                <li><a href="research-overview.html">Overview</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="root-health.html">Root Health</a></li>
+                <li><a href="radar.html">RADAR</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#">
+                <span>People</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i>
+              </a>
+
+              <ul>
+                <li><a href="professor.html">Professor</a></li>
+                <li><a href="members.html">Members</a></li>
+              </ul>
+            </li>
+
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="patient.html">Patient</a></li>
+            <li><a href="activity.html">Activity</a></li>
+
+          </ul>
+
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <a class="cta-btn d-none d-sm-block" href="index.html#contact">
+          Contact Us
+        </a>
+
+      </div>
+    </div>
+
+  </header>
+
+
+  <main class="main">
+
+    <section class="page-wrap">
+
+      <div class="container">
+
+        <h1 class="page-title">PROJECTS</h1>
+        <hr class="title-line">
+
+        <h2 class="section-title-small">Ongoing Projects</h2>
+
+        <div class="project-item" data-aos="fade-up">
+
+          <button
+            class="project-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#project-1"
+            aria-expanded="false"
+            aria-controls="project-1">
+
+            <div class="project-number">01</div>
+
+            <div>
+
+              <span class="project-type">Research Project</span>
+
+              <h3 class="project-title">
+                Development and Multicenter Validation of a Multimodal Deep Learning Model for Lung Cancer Recurrence Prediction
+              </h3>
+
+              <p class="project-subtitle">
+                Risk ADApted suRveillance and Comprehensive strAtegy based on AI-powered prediction modEl for NSCLC (RADAR CARE study)
+              </p>
+
+              <p class="project-meta">
+                Samsung Medical Center · Mar 2025 – Feb 2028 · KRW 172.84 million
+              </p>
+
+            </div>
+
+            <i class="bi bi-chevron-down project-icon"></i>
+
+          </button>
+
+
+          <div class="collapse" id="project-1">
+
+            <div class="project-detail">
+
+              <div class="detail-grid">
+
+                <div class="detail-label">Project ID</div>
+                <div class="detail-value">
+                  2710079832
+                </div>
+
+                <div class="detail-label">Principal Investigator</div>
+                <div class="detail-value">
+                  Hyun Ae Jung
+                </div>
+
+                <div class="detail-label">Institution</div>
+                <div class="detail-value">
+                  Samsung Medical Center
+                </div>
+
+                <div class="detail-label">Funding Agency</div>
+                <div class="detail-value">
+                  National Research Foundation of Korea (NRF)
+                </div>
+
+                <div class="detail-label">Program</div>
+                <div class="detail-value">
+                  Excellent Research Program – Mid-Career Researcher (Type 1)
+                </div>
+
+                <div class="detail-label">Research Period</div>
+                <div class="detail-value">
+                  March 1, 2025 – February 29, 2028
+                </div>
+
+                <div class="detail-label">Total Research Funding</div>
+                <div class="detail-value">
+                  KRW 172.84 million
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer id="footer" class="footer light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+
+        <div class="col-lg-6 col-md-6 footer-about">
+
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">LUCID</span>
+          </a>
+
+          <div class="footer-contact pt-3">
+            <p>연구실 주소를 입력하세요.</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+82-00-0000-0000</span></p>
+            <p><strong>Email:</strong> <span>hyunae0608@gmail.com</span></p>
+          </div>
+
+        </div>
+
+
+        <div class="col-lg-6 col-md-6 footer-links">
+
+          <h4>Quick Links</h4>
+
+          <ul>
+            <li><a href="intro.html">Intro</a></li>
+            <li><a href="research-overview.html">Research</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="professor.html">Professor</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li><a href="publications.html">Publications</a></li>
+            <li><a href="patient.html">Patient</a></li>
+            <li><a href="activity.html">Activity</a></li>
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+
+      <p>
+        © <span>Copyright</span>
+        <strong class="px-1 sitename">LUCID</strong>
+        <span>All Rights Reserved</span>
+      </p>
+
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Distributed by <a href="https://themewagon.com/">ThemeWagon</a>
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <a href="#"
+     id="scroll-top"
+     class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
