@@ -1,0 +1,202 @@
+.intro-page {
+      padding: 70px 0 90px;
+      background: #fff;
+    }
+
+    .intro-title {
+      color: var(--accent-color);
+      font-size: 38px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      font-family: var(--heading-font);
+    }
+
+    .intro-title-line {
+      border: 0;
+      border-top: 2px solid #222;
+      opacity: 1;
+      margin: 0 0 24px;
+    }
+
+    .intro-content h2 {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .intro-content p {
+      line-height: 1.8;
+      font-size: 16px;
+      margin-bottom: 18px;
+    }
+
+    .intro-section {
+      margin-top: 75px;
+    }
+
+    .intro-section-title {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 25px;
+      color: var(--heading-color);
+    }
+
+    .journey-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.journey-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-width: 1000px;
+}
+
+    /* =========================
+       Milestone
+       ========================= */
+    .milestone-wrapper {
+      position: relative;
+      width: 100%;
+      margin-top: 20px;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .milestone-img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+.publication-hotspot {
+  position: absolute;
+  display: block;
+  z-index: 5;
+
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  outline: none;
+
+  cursor: pointer;
+}
+
+.publication-hotspot:hover,
+.publication-hotspot:focus {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+    .pub-2020 {
+      left: 10.4%;
+      top: 64.6%;
+      width: 10.1%;
+      height: 4.6%;
+    }
+
+    .pub-2022 {
+      left: 62.4%;
+      top: 36.0%;
+      width: 9.5%;
+      height: 4.2%;
+    }
+
+    .pub-2023 {
+      left: 77.9%;
+      top: 48.9%;
+      width: 9.7%;
+      height: 4.3%;
+    }
+
+    .pub-2024 {
+      left: 62.0%;
+      top: 63.0%;
+      width: 9.9%;
+      height: 4.2%;
+    }
+
+    .pub-2026 {
+      left: 62.0%;
+      top: 84.7%;
+      width: 9.9%;
+      height: 4.6%;
+    }
+
+    /* =========================
+       Research Direction
+       ========================= */
+    .intro-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 30px;
+      height: 100%;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+    }
+
+    .intro-card i {
+      font-size: 34px;
+      color: var(--accent-color);
+      margin-bottom: 18px;
+    }
+
+    .intro-card h4 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .intro-card p {
+      margin: 0;
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .vision-text {
+      font-size: 17px;
+      line-height: 1.9;
+      max-width: 950px;
+    }
+
+    @media (max-width: 991px) {
+      .intro-title-line {
+        margin-bottom: 24px;
+      }
+
+      .intro-content {
+        margin-top: 10px;
+      }
+
+      .intro-section {
+        margin-top: 60px;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .intro-title {
+        font-size: 31px;
+      }
+
+      .intro-content h2 {
+        font-size: 25px;
+      }
+
+      .intro-section-title {
+        font-size: 23px;
+      }
+
+      .milestone-wrapper {
+        overflow-x: auto;
+      }
+
+      .milestone-inner {
+        position: relative;
+        min-width: 900px;
+      }
+    }

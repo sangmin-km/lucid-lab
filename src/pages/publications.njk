@@ -1,0 +1,112 @@
+{% extends "_includes/base.njk" %}
+{% block htmlOpen %}<html lang="ko">{% endblock %}
+{% block head %}
+<title>Publications | LUCID</title>
+{% endblock %}
+{% block styles %}
+<link href="assets/css/pages/publications.css" rel="stylesheet">
+{% endblock %}
+{% block bodyOpen %}<body>{% endblock %}
+{% block content %}
+<main class="main">
+  <section class="page-wrap">
+    <div class="container">
+
+      <h1 class="page-title">PUBLICATIONS</h1>
+      <hr class="title-line">
+
+      <div class="publication-tabs" role="tablist" aria-label="Publication categories">
+        <button class="publication-tab active" type="button" data-target="journal-panel">Journal</button>
+        <button class="publication-tab" type="button" data-target="conference-panel">Conference</button>
+      </div>
+
+      <div id="journal-panel" class="publication-panel active">
+        {% include "_includes/publication-list.njk" %}
+      </div>
+
+      <div id="conference-panel" class="publication-panel">
+
+      <h2 class="year-title">2026</h2>
+
+      <div class="publication-item" data-aos="fade-up">
+        <button
+          class="publication-button"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#conference-2026-1"
+          aria-expanded="false"
+          aria-controls="conference-2026-1">
+
+          <div class="publication-number">01</div>
+
+          <div>
+            <span class="publication-type">Conference</span>
+            <h3 class="publication-title">
+              Efficacy of HER2-Directed Therapy in Salivary Gland Tumors: Comparable Overall Survival Across HER2-Low and HER2-High Disease
+            </h3>
+            <p class="publication-meta">
+              ESMO Asia Congress 2026
+            </p>
+          </div>
+
+          <i class="bi bi-chevron-down publication-icon"></i>
+        </button>
+
+        <div class="collapse" id="conference-2026-1">
+          <div class="publication-detail">
+            <div class="detail-grid">
+              <div class="detail-label">Authors</div>
+              <div class="detail-value"></div>
+
+              <div class="detail-label">Conference</div>
+              <div class="detail-value">ESMO Asia Congress 2026</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="publication-item" data-aos="fade-up">
+        <button
+          class="publication-button"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#conference-2026-2"
+          aria-expanded="false"
+          aria-controls="conference-2026-2">
+
+          <div class="publication-number">02</div>
+
+          <div>
+            <span class="publication-type">Conference</span>
+            <h3 class="publication-title">
+              RADAR-EGFR: An Artificial Intelligence-powered Longitudinal Prediction Model for Survival Outcomes in Advanced EGFR-mutant NSCLC Receiving EGFR-TKI Therapy
+            </h3>
+            <p class="publication-meta">
+              ESMO Asia Congress 2026
+            </p>
+          </div>
+
+          <i class="bi bi-chevron-down publication-icon"></i>
+        </button>
+
+        <div class="collapse" id="conference-2026-2">
+          <div class="publication-detail">
+            <div class="detail-grid">
+              <div class="detail-label">Authors</div>
+              <div class="detail-value"></div>
+
+              <div class="detail-label">Conference</div>
+              <div class="detail-value">ESMO Asia Congress 2026</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}
+{% block scripts %}
+<script src="assets/js/pages/publications.js"></script>
+{% endblock %}

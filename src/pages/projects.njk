@@ -1,0 +1,118 @@
+{% extends "_includes/base.njk" %}
+{% block htmlOpen %}<html lang="ko">{% endblock %}
+{% block head %}
+<title>Projects | Research Lab</title>
+<meta name="description" content="Ongoing research projects">
+<meta name="keywords" content="research projects, NSCLC, multimodal AI, RADAR CARE">
+{% endblock %}
+{% block styles %}
+<link href="assets/css/pages/projects.css" rel="stylesheet">
+{% endblock %}
+{% block bodyOpen %}<body>{% endblock %}
+{% block content %}
+<main class="main">
+
+  <section class="page-wrap">
+
+    <div class="container">
+
+      <h1 class="page-title">PROJECTS</h1>
+      <hr class="title-line">
+
+      <h2 class="section-title-small">Ongoing Projects</h2>
+
+      <div class="project-item" data-aos="fade-up">
+
+        <button
+          class="project-button"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#project-1"
+          aria-expanded="false"
+          aria-controls="project-1">
+
+          <div class="project-number">01</div>
+
+          <div>
+
+            <span class="project-type">Research Project</span>
+
+            <h3 class="project-title">
+              Development and Multicenter Validation of a Multimodal Deep Learning Model for Lung Cancer Recurrence Prediction
+            </h3>
+
+            <p class="project-subtitle">
+              Risk ADApted suRveillance and Comprehensive strAtegy based on AI-powered prediction modEl for NSCLC (RADAR CARE study)
+            </p>
+
+            <p class="project-meta">
+              Samsung Medical Center · Mar 2025 – Feb 2028 · KRW 172.84 million
+            </p>
+
+          </div>
+
+          <i class="bi bi-chevron-down project-icon"></i>
+
+        </button>
+
+        <div class="collapse" id="project-1">
+
+          <div class="project-detail">
+
+            <div class="detail-grid">
+
+              <div class="detail-label">Project ID</div>
+              <div class="detail-value">
+                2710079832
+              </div>
+
+              <div class="detail-label">Principal Investigator</div>
+              <div class="detail-value">
+                Hyun Ae Jung
+              </div>
+
+              <div class="detail-label">Institution</div>
+              <div class="detail-value">
+                Samsung Medical Center
+              </div>
+
+              <div class="detail-label">Funding Agency</div>
+              <div class="detail-value">
+                National Research Foundation of Korea (NRF)
+              </div>
+
+              <div class="detail-label">Program</div>
+              <div class="detail-value">
+                Excellent Research Program – Mid-Career Researcher (Type 1)
+              </div>
+
+              <div class="detail-label">Research Period</div>
+              <div class="detail-value">
+                March 1, 2025 – February 29, 2028
+              </div>
+
+              <div class="detail-label">Total Research Funding</div>
+              <div class="detail-value">
+                KRW 172.84 million
+              </div>
+
+              <div class="detail-label">Project Contact</div>
+              <div class="detail-value">
+                For inquiries regarding this project, please contact
+                <a href="mailto:heeejj.cho@gmail.com">heeejj.cho@gmail.com</a>.
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+{% endblock %}

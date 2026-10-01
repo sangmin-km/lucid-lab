@@ -1,0 +1,56 @@
+<p class="publication-source">
+  Publications from the past 5 years · {{ publications.articles.length }} articles<br>
+  Updated {{ publications.updatedAt }} ·
+  <a href="{{ publications.searchUrl }}" target="_blank" rel="noopener noreferrer">View on PubMed <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+</p>
+{% for group in publicationYears %}
+<h2 class="year-title">{{ group.year }}</h2>
+{% for article in group.articles %}
+<div class="publication-item">
+  <button class="publication-button" type="button" data-bs-toggle="collapse"
+    data-bs-target="#publication-pmid-{{ article.pmid }}" aria-expanded="false"
+    aria-controls="publication-pmid-{{ article.pmid }}">
+    <span class="publication-number">{% if loop.index < 10 %}0{% endif %}{{ loop.index }}</span>
+    <span>
+      <span class="publication-type">{{ article.type or 'Article' }}</span>
+      <span class="publication-title d-block">{{ article.title }}</span>
+      <span class="publication-meta d-block">{{ article.journal }} · {{ article.date }}{% if article.volume %} · {{ article.volume }}{% if article.issue %}({{ article.issue }}){% endif %}{% endif %}{% if article.pages %}: {{ article.pages }}{% endif %}</span>
+    </span>
+    <i class="bi bi-chevron-down publication-icon" aria-hidden="true"></i>
+  </button>
+  <div class="collapse" id="publication-pmid-{{ article.pmid }}">
+    <div class="publication-detail">
+      <div class="detail-grid">
+        <div class="detail-label">Authors</div>
+        <div class="detail-value">{{ article.authors | join('; ') }}</div>
+        <div class="detail-label">Journal</div>
+        <div class="detail-value">{{ article.journal }}</div>
+        <div class="detail-label">Publication Date</div>
+        <div class="detail-value">{{ article.date }}</div>
+        {% if article.volume or article.issue or article.pages %}
+        <div class="detail-label">Volume / Issue / Pages</div>
+        <div class="detail-value">{{ article.volume or '—' }} / {{ article.issue or '—' }} / {{ article.pages or '—' }}</div>
+        {% endif %}
+        {% if article.doi %}
+        <div class="detail-label">DOI</div>
+        <div class="detail-value"><a class="doi-link" href="https://doi.org/{{ article.doi }}" target="_blank" rel="noopener noreferrer">{{ article.doi }} <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a></div>
+        {% endif %}
+        <div class="detail-label">PubMed</div>
+        <div class="detail-value"><a class="doi-link" href="https://pubmed.ncbi.nlm.nih.gov/{{ article.pmid }}/" target="_blank" rel="noopener noreferrer">PMID: {{ article.pmid }} <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a></div>
+      </div>
+      {% if article.abstract.length %}
+      <h4 class="abstract-title">Abstract</h4>
+      {% for paragraph in article.abstract %}
+      <p class="abstract-text">{% if paragraph.label %}<strong>{{ paragraph.label }}: </strong>{% endif %}{{ paragraph.text }}</p>
+      {% endfor %}
+      {% endif %}
+      {% if article.keywords.length %}
+      <h4 class="keywords-title">Keywords</h4>
+      <div class="keyword-list">{% for keyword in article.keywords %}<span class="keyword">{{ keyword }}</span>{% endfor %}</div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% endfor %}
+<p class="publication-source">Source: PubMed / NCBI · <a href="https://www.ncbi.nlm.nih.gov/About/disclaimer.html" target="_blank" rel="noopener noreferrer">NCBI disclaimer and copyright</a></p>

@@ -1,0 +1,147 @@
+body {
+  background: #ffffff;
+}
+
+.page-wrap {
+  padding: 70px 0 90px;
+  background: #ffffff;
+  min-height: 70vh;
+}
+
+.page-title {
+  color: var(--accent-color);
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  font-family: var(--heading-font);
+}
+
+.title-line {
+  border: 0;
+  border-top: 2px solid #222;
+  opacity: 1;
+  margin: 0 0 55px;
+}
+
+.section-title-small {
+  font-size: 31px;
+  font-weight: 500;
+  color: #4e555c;
+  margin-bottom: 18px;
+}
+
+.project-item {
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #eceff2;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.project-button {
+  width: 100%;
+  background: #fff;
+  border: 0;
+  text-align: left;
+  padding: 26px 28px;
+  display: grid;
+  grid-template-columns: 52px 1fr 24px;
+  gap: 18px;
+  align-items: start;
+}
+
+.project-button:hover {
+  background: #ffffff;
+}
+
+.project-number {
+  color: #888;
+  font-size: 14px;
+  padding-top: 3px;
+}
+
+.project-type {
+  display: inline-block;
+  background: #78a7d8;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 12px;
+  letter-spacing: .04em;
+  padding: 5px 9px;
+  margin-bottom: 11px;
+}
+
+.project-title {
+  font-size: 21px;
+  line-height: 1.45;
+  font-weight: 600;
+  color: #1f2328;
+  margin: 0 0 8px;
+}
+
+.project-subtitle {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #58616a;
+  margin: 0 0 12px;
+}
+
+.project-meta {
+  font-size: 14px;
+  color: #6c757d;
+  margin: 0;
+}
+
+.project-icon {
+  color: #6c757d;
+  font-size: 18px;
+  transition: transform .2s ease;
+  margin-top: 6px;
+}
+
+.project-button[aria-expanded="true"] .project-icon {
+  transform: rotate(180deg);
+}
+
+.project-detail {
+  border-top: 1px solid #edf0f2;
+  padding: 28px;
+  background: #ffffff;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 14px 22px;
+}
+
+.detail-label {
+  font-weight: 700;
+  color: #2d3439;
+}
+
+.detail-value {
+  color: #555;
+  line-height: 1.7;
+}
+
+@media (max-width: 767px) {
+  .project-button {
+    grid-template-columns: 36px 1fr 20px;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .project-title {
+    font-size: 18px;
+  }
+
+  .project-detail {
+    padding: 22px 20px;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+}

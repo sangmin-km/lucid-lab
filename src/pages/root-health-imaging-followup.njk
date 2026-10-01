@@ -1,0 +1,145 @@
+{% extends "_includes/base.njk" %}
+{% block htmlOpen %}<html lang="en">{% endblock %}
+{% block head %}
+<title>Imaging, Follow-up & Laboratory Data | ROOT HEALTH</title>
+{% endblock %}
+{% block styles %}
+<link href="assets/css/pages/data-tables.css" rel="stylesheet">
+{% endblock %}
+{% block bodyOpen %}<body>{% endblock %}
+{% block content %}
+<main class="main">
+<section class="data-page">
+<div class="container">
+
+  <div class="breadcrumb-line">
+    <a href="data.html">Data</a><span class="mx-2">/</span>Imaging, Follow-up &amp; Laboratory Data
+  </div>
+
+  <h1 class="page-title">IMAGING, FOLLOW-UP &amp; LABORATORY DATA</h1>
+
+  <p class="page-subtitle">
+    ROOT HEALTH includes large-scale imaging, outpatient follow-up, and laboratory data
+    collected across the longitudinal NSCLC care pathway. The sections below retain the
+    counts and metrics summarized in the current ROOT HEALTH workbook.
+  </p>
+
+  <div class="cohort-note">
+    <strong>Cohort definition:</strong> 38,154 patients with NSCLC, excluding stage 0,
+    who received cancer-directed treatment at Samsung Medical Center.
+    <strong>Data cutoff:</strong> September 18, 2026.
+  </div>
+
+  <div class="panel" data-aos="fade-up">
+    <div class="panel-head">
+      <h2>Imaging Data</h2>
+      <p>Number of imaging examinations available in ROOT HEALTH.</p>
+    </div>
+    <div class="table-responsive">
+      <table class="data-table" style="min-width:600px">
+        <thead>
+          <tr><th>Imaging Modality</th><th class="num">No. of Examinations</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Chest CT</td><td class="num">500,919</td></tr>
+          <tr><td>Brain MRI</td><td class="num">117,756</td></tr>
+          <tr><td>PET</td><td class="num">73,637</td></tr>
+          <tr class="total-row"><td>Total imaging examinations</td><td class="num">692,312</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="panel" data-aos="fade-up">
+    <div class="panel-head">
+      <h2>OPD Follow-up</h2>
+      <p>Outpatient follow-up volume for the ROOT HEALTH NSCLC cohort.</p>
+    </div>
+    <div class="metric-grid">
+      <div class="metric-card">
+        <span class="metric-number">38,154</span>
+        <span class="metric-label">Patients with OPD follow-up</span>
+      </div>
+      <div class="metric-card">
+        <span class="metric-number">1,298,103</span>
+        <span class="metric-label">Total OPD visits</span>
+      </div>
+      <div class="metric-card">
+        <span class="metric-number">34.0</span>
+        <span class="metric-label">Mean OPD visits per patient</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel" data-aos="fade-up">
+    <div class="panel-head">
+      <h2>Laboratory Tests</h2>
+      <p>Laboratory tests performed after NSCLC diagnosis.</p>
+    </div>
+
+    <div class="table-responsive">
+      <table class="data-table" style="min-width:650px">
+        <thead>
+          <tr><th>Laboratory Test</th><th class="num">No. of Tests Performed</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>ALC (Absolute Lymphocyte Count)</td><td class='num'>802,042</td></tr>
+<tr><td>ALP (Alkaline Phosphotase)</td><td class='num'>799,860</td></tr>
+<tr><td>ALT</td><td class='num'>876,286</td></tr>
+<tr><td>ANC (Absolute Neutrophil Count)</td><td class='num'>828,496</td></tr>
+<tr><td>APTT</td><td class='num'>129,675</td></tr>
+<tr><td>AST</td><td class='num'>876,318</td></tr>
+<tr><td>Albumin</td><td class='num'>863,272</td></tr>
+<tr><td>BUN (Blood Urea Nitrogen)</td><td class='num'>867,210</td></tr>
+<tr><td>Bilirubin, Total</td><td class='num'>782,788</td></tr>
+<tr><td>CEA</td><td class='num'>154,349</td></tr>
+<tr><td>CRP (C-Reactive Protein)</td><td class='num'>371,595</td></tr>
+<tr><td>Ca, Total, Serum (Calcium)</td><td class='num'>718,510</td></tr>
+<tr><td>Cl, Serum (Chloride)</td><td class='num'>668,964</td></tr>
+<tr><td>Creatinine</td><td class='num'>867,427</td></tr>
+<tr><td>Estimated GFR</td><td class='num'>862,517</td></tr>
+<tr><td>Hemoglobin, Blood</td><td class='num'>911,562</td></tr>
+<tr><td>K, Serum (Potassium)</td><td class='num'>668,964</td></tr>
+<tr><td>LD, Serum (Lactate Dehydrogenase)</td><td class='num'>253,095</td></tr>
+<tr><td>Mg (Magnesium)</td><td class='num'>190,990</td></tr>
+<tr><td>Na, Serum (Sodium)</td><td class='num'>668,964</td></tr>
+<tr><td>P, Serum (Phosphorous)</td><td class='num'>750,730</td></tr>
+<tr><td>PT(INR)</td><td class='num'>136,475</td></tr>
+<tr><td>Platelet Count, Blood</td><td class='num'>911,563</td></tr>
+<tr><td>Protein, Total</td><td class='num'>775,916</td></tr>
+<tr><td>WBC Count, Blood</td><td class='num'>911,565</td></tr>
+          <tr class="total-row"><td>Total laboratory tests</td><td class="num">16,649,133</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="panel" data-aos="fade-up">
+    <div class="panel-head">
+      <h2>Laboratory Summary</h2>
+    </div>
+    <div class="metric-grid" style="grid-template-columns:repeat(2,1fr)">
+      <div class="metric-card">
+        <span class="metric-number">37,920</span>
+        <span class="metric-label">Patients with post-diagnosis laboratory tests</span>
+      </div>
+      <div class="metric-card">
+        <span class="metric-number">439.1</span>
+        <span class="metric-label">Mean laboratory tests per patient</span>
+      </div>
+    </div>
+  </div>
+
+  <p class="footnote">
+    Laboratory test counts represent tests performed after NSCLC diagnosis
+    (N = 37,920 patients).
+  </p>
+
+  <a href="data.html" class="back-link">
+    <i class="bi bi-arrow-left"></i>Back to Data
+  </a>
+
+</div>
+</section>
+</main>
+{% endblock %}

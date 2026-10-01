@@ -1,0 +1,37 @@
+.patient-page {
+  padding: 70px 0 110px;
+  background: #fff;
+  min-height: 70vh;
+}
+
+.page-title {
+  color: var(--accent-color);
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  font-family: var(--heading-font);
+}
+
+.title-line {
+  border: 0;
+  border-top: 2px solid #222;
+  opacity: 1;
+  margin: 0 0 55px;
+}
+
+.patient-placeholder {
+  max-width: 900px;
+  padding: 45px 0;
+}
+
+.patient-placeholder h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.patient-placeholder p {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #5f666c;
+}

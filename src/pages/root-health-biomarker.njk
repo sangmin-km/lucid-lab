@@ -1,0 +1,171 @@
+{% extends "_includes/base.njk" %}
+{% block htmlOpen %}<html lang="en">{% endblock %}
+{% block head %}
+<title>Genomic & Biomarker Data | ROOT HEALTH</title>
+{% endblock %}
+{% block styles %}
+<link href="assets/css/pages/root-health-biomarker.css" rel="stylesheet">
+{% endblock %}
+{% block bodyOpen %}<body>{% endblock %}
+{% block content %}
+<main class="main">
+
+  <section class="biomarker-page">
+
+    <div class="container">
+
+      <div class="breadcrumb-line">
+        <a href="data.html">Data</a>
+        <span class="mx-2">/</span>
+        Genomic &amp; Biomarker Data
+      </div>
+
+      <h1 class="page-title">GENOMIC &amp; BIOMARKER DATA</h1>
+
+      <p class="page-subtitle">
+        ROOT HEALTH includes molecular and biomarker testing data for major
+        actionable and clinically relevant biomarkers in NSCLC.
+        The table below preserves the testing modalities, patient coverage,
+        and total test volumes summarized in the current ROOT HEALTH workbook.
+      </p>
+
+      <div class="cohort-note">
+        <strong>Cohort definition:</strong>
+        38,154 patients with NSCLC, excluding stage 0, who received cancer-directed
+        treatment at Samsung Medical Center.
+        <strong>Data cutoff:</strong> September 18, 2026.
+      </div>
+
+      <div class="table-panel" data-aos="fade-up">
+
+        <div class="table-head">
+          <h2>Genomic and Biomarker Data Available in ROOT HEALTH</h2>
+          <p>
+            Patient-level testing coverage and total number of tests performed.
+          </p>
+        </div>
+
+        <div class="table-responsive">
+
+          <table class="bio-table">
+
+            <thead>
+              <tr>
+                <th>Biomarker</th>
+                <th>Testing Modalities</th>
+                <th class="num">Patients Tested (N)</th>
+                <th class="num">Patients Tested (%)</th>
+                <th class="num">Tests Performed (N)</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+      <td class="marker-name">EGFR</td>
+      <td>NGS, PCR, PCR-based sequencing</td>
+      <td class="num">31,667</td>
+      <td class="num">83.0%</td>
+      <td class="num">70,617</td>
+    </tr>
+<tr>
+      <td class="marker-name">ALK</td>
+      <td>NGS, IHC, FISH</td>
+      <td class="num">30,631</td>
+      <td class="num">80.3%</td>
+      <td class="num">56,943</td>
+    </tr>
+<tr>
+      <td class="marker-name">PD-L1</td>
+      <td>IHC</td>
+      <td class="num">22,557</td>
+      <td class="num">59.1%</td>
+      <td class="num">61,365</td>
+    </tr>
+<tr>
+      <td class="marker-name">BRAF V600E</td>
+      <td>NGS, PCR, PCR-based sequencing</td>
+      <td class="num">4,784</td>
+      <td class="num">12.5%</td>
+      <td class="num">5,547</td>
+    </tr>
+<tr>
+      <td class="marker-name">RAS</td>
+      <td>NGS, PCR, PCR-based sequencing</td>
+      <td class="num">9,107</td>
+      <td class="num">23.9%</td>
+      <td class="num">15,149</td>
+    </tr>
+<tr>
+      <td class="marker-name">ROS1</td>
+      <td>NGS, PCR, IHC, FISH</td>
+      <td class="num">8,477</td>
+      <td class="num">22.2%</td>
+      <td class="num">10,239</td>
+    </tr>
+<tr>
+      <td class="marker-name">NTRK</td>
+      <td>NGS, IHC</td>
+      <td class="num">5,111</td>
+      <td class="num">13.4%</td>
+      <td class="num">5,959</td>
+    </tr>
+<tr>
+      <td class="marker-name">HER2</td>
+      <td>NGS, PCR, PCR-based sequencing, FISH</td>
+      <td class="num">4,521</td>
+      <td class="num">11.8%</td>
+      <td class="num">5,352</td>
+    </tr>
+<tr>
+      <td class="marker-name">MET exon 14 skipping</td>
+      <td>NGS</td>
+      <td class="num">5,111</td>
+      <td class="num">13.4%</td>
+      <td class="num">5,959</td>
+    </tr>
+<tr>
+      <td class="marker-name">HER2 IHC</td>
+      <td>IHC</td>
+      <td class="num">7,291</td>
+      <td class="num">19.1%</td>
+      <td class="num">8,216</td>
+    </tr>
+<tr>
+      <td class="marker-name">MET IHC or FISH</td>
+      <td>IHC, FISH</td>
+      <td class="num">8,783</td>
+      <td class="num">23.0%</td>
+      <td class="num">10,052</td>
+    </tr>
+<tr>
+      <td class="marker-name">NGS (Overall)</td>
+      <td>NGS</td>
+      <td class="num">5,111</td>
+      <td class="num">13.4%</td>
+      <td class="num">5,959</td>
+    </tr>
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </div>
+
+      <p class="footnote">
+        Testing coverage is calculated using the ROOT HEALTH NSCLC cohort as the denominator.
+        Some patients may have undergone repeated testing or multiple testing modalities;
+        therefore, the number of tests performed may exceed the number of patients tested.
+      </p>
+
+      <a href="data.html" class="back-link">
+        <i class="bi bi-arrow-left"></i>
+        Back to Data
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
+{% endblock %}

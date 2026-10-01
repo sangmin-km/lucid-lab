@@ -1,0 +1,20 @@
+# Installed dependencies and local tooling
+node_modules/
+.tools/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Local secrets (keep a shareable example if provided)
+.env
+.env.*
+!.env.example
+
+# Temporary update data and logs
+src/data/publications.json.tmp
+npm-debug.log*
+
+# Generated HTML and publications.json are intentionally tracked:
+# the static site deploys these files without running Node or PubMed.

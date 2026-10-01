@@ -1,0 +1,249 @@
+{% extends "_includes/base.njk" %}
+{% block htmlOpen %}<html lang="ko">{% endblock %}
+{% block head %}
+<title>Research Overview | LUCID</title>
+<meta name="description" content="Research overview">
+<meta name="keywords" content="research, clinical data, AI, precision oncology">
+{% endblock %}
+{% block styles %}
+<link href="assets/css/pages/research-overview.css" rel="stylesheet">
+{% endblock %}
+{% block bodyOpen %}<body>{% endblock %}
+{% block content %}
+<main class="main">
+
+  <section class="research-page">
+
+    <div class="container">
+
+      <h1 class="research-page-title">RESEARCH</h1>
+      <hr class="research-title-line">
+
+      <div class="research-lead"
+           data-aos="fade-up">
+
+        <h2>Research Overview</h2>
+
+        <p>
+          Our research focuses on transforming longitudinal clinical data
+          and multimodal medical information into actionable evidence
+          for cancer care.
+        </p>
+
+        <p>
+          We combine real-world clinical data, molecular information,
+          medical imaging, pathology, and artificial intelligence
+          to better understand patient trajectories and support
+          prediction, treatment decision-making, and precision oncology.
+        </p>
+
+        <p>
+          Our goal is to develop practical research frameworks and
+          AI-based tools that can be translated into real-world clinical practice.
+        </p>
+
+      </div>
+
+      <div class="research-section">
+
+        <h3 class="research-section-title">
+          Our Research Focus
+        </h3>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6"
+               data-aos="fade-up"
+               data-aos-delay="100">
+
+            <div class="focus-card">
+
+              <i class="bi bi-database"></i>
+
+              <h4>
+                Longitudinal Clinical Data
+              </h4>
+
+              <p>
+                We study real-world patient trajectories using
+                longitudinal clinical data collected across diagnosis,
+                treatment, response assessment, and follow-up.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-4 col-md-6"
+               data-aos="fade-up"
+               data-aos-delay="200">
+
+            <div class="focus-card">
+
+              <i class="bi bi-layers"></i>
+
+              <h4>
+                Multimodal Data Integration
+              </h4>
+
+              <p>
+                We integrate clinical, laboratory, molecular,
+                radiologic, and pathologic information to build
+                comprehensive representations of individual patients.
+              </p>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-4 col-md-6"
+               data-aos="fade-up"
+               data-aos-delay="300">
+
+            <div class="focus-card">
+
+              <i class="bi bi-cpu"></i>
+
+              <h4>
+                Artificial Intelligence
+              </h4>
+
+              <p>
+                We develop machine learning and deep learning models
+                for risk prediction, clinical decision support,
+                and precision cancer care.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="research-section">
+
+        <h3 class="research-section-title">
+          Main Research Projects
+        </h3>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4"
+               data-aos="fade-up"
+               data-aos-delay="100">
+
+            <div class="project-card">
+
+              <span class="project-label">
+                Data Platform
+              </span>
+
+              <h3>
+                ROOT HEALTH
+              </h3>
+
+              <p>
+                ROOT HEALTH is a research-ready oncology data platform
+                designed to organize and integrate longitudinal,
+                multimodal real-world data for large-scale clinical research.
+              </p>
+
+              <a href="root-health.html">
+                Explore ROOT HEALTH
+                <i class="bi bi-arrow-right"></i>
+              </a>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-4"
+               data-aos="fade-up"
+               data-aos-delay="200">
+
+            <div class="project-card">
+
+              <span class="project-label">
+                Clinical AI
+              </span>
+
+              <h3>
+                RADAR CARE
+              </h3>
+
+              <p>
+                RADAR CARE focuses on AI-based risk prediction using
+                longitudinal and multimodal clinical data,
+                with the goal of providing clinically meaningful
+                risk estimates at the point of care.
+              </p>
+
+              <a href="radar.html">
+                Explore RADAR CARE
+                <i class="bi bi-arrow-right"></i>
+              </a>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-4"
+               data-aos="fade-up"
+               data-aos-delay="300">
+
+            <div class="project-card">
+
+              <span class="project-label">
+                Continuum
+              </span>
+
+              <h3>PRISM</h3>
+
+              <p>
+                PRISM is a multimodal foundation model research framework
+                for real-time prediction of survival and treatment response
+                across the cancer care continuum.
+              </p>
+
+              <a href="prism.html">
+                Explore PRISM
+                <i class="bi bi-arrow-right"></i>
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="research-section">
+
+        <h3 class="research-section-title">
+          Research Keywords
+        </h3>
+
+        <div class="keywords-wrap">
+
+          <span class="keyword">Real-World Data</span>
+          <span class="keyword">Longitudinal Data</span>
+          <span class="keyword">Multimodal AI</span>
+          <span class="keyword">Clinical Prediction</span>
+          <span class="keyword">Precision Oncology</span>
+          <span class="keyword">Medical Imaging</span>
+          <span class="keyword">Pathology</span>
+          <span class="keyword">Molecular Data</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+{% endblock %}

@@ -1,0 +1,186 @@
+.professor-page {
+  padding: 70px 0 90px;
+  background: #ffffff;
+}
+
+.professor-page-title {
+  color: var(--accent-color);
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: var(--heading-font);
+}
+
+.professor-title-line {
+  border: 0;
+  border-top: 2px solid #222;
+  opacity: 1;
+  margin: 0 0 65px;
+}
+
+.professor-photo-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.professor-photo {
+  width: 100%;
+  max-width: 430px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.professor-info {
+  padding-left: 25px;
+}
+
+.professor-name {
+  font-size: 29px;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 8px;
+}
+
+.professor-position {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 3px;
+}
+
+.professor-role {
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.profile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.profile-links-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 32px;
+}
+
+.profile-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--default-color);
+  text-decoration: none;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.profile-links a {
+  transition: 0.2s;
+}
+
+.profile-links a:hover {
+  color: var(--accent-color);
+}
+
+.profile-links i {
+  color: var(--accent-color);
+  font-size: 18px;
+}
+
+.info-divider {
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  margin: 24px 0 22px;
+}
+
+.info-heading {
+  display: inline-block;
+  background: #333333;
+  color: #ffffff;
+  padding: 8px 20px;
+  border-radius: 24px;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 10px 0 18px;
+}
+
+.profile-table {
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+.profile-table tr {
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.profile-table td {
+  padding: 8px 5px;
+  vertical-align: top;
+  line-height: 1.65;
+  font-size: 14px;
+}
+
+.profile-table td:first-child {
+  width: 180px;
+  font-weight: 600;
+  color: var(--heading-color);
+  white-space: nowrap;
+}
+
+.activity-list {
+  padding-left: 20px;
+  margin: 0 0 28px;
+}
+
+.activity-list li {
+  margin-bottom: 9px;
+  line-height: 1.65;
+  font-size: 14px;
+}
+
+@media (max-width: 991px) {
+  .professor-info {
+    padding-left: 0;
+    margin-top: 40px;
+  }
+
+  .professor-photo {
+    max-width: 380px;
+  }
+
+  .professor-title-line {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 575px) {
+  .professor-page-title {
+    font-size: 31px;
+  }
+
+  .professor-name {
+    font-size: 24px;
+  }
+
+  .profile-table,
+  .profile-table tbody,
+  .profile-table tr,
+  .profile-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .profile-table td:first-child {
+    width: 100%;
+    padding-bottom: 1px;
+  }
+
+  .profile-table td:last-child {
+    padding-top: 1px;
+  }
+}

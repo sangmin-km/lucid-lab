@@ -40,7 +40,7 @@
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #f1f7fc;
+  --background-color: #ffffff;
   --surface-color: #ffffff;
 }
 
@@ -53,6 +53,15 @@
 }
 
 /* Smooth scroll */
+#heejin-cho {
+  scroll-margin-top: 160px;
+}
+
+#heejin-cho:target {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 4px;
+}
+
 :root {
   scroll-behavior: smooth;
 }
@@ -291,10 +300,22 @@ h6 {
 }
 
 .header .logo h1 {
-  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
   margin: 0;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  line-height: 1.15;
   color: var(--heading-color);
+}
+
+.header .lab-subtitle {
+  font-size: 12px;
+  font-weight: 500;
+  color: #6c757d;
+  letter-spacing: 0.3px;
+  margin-top: 2px;
+  line-height: 1.2;
 }
 
 .header .cta-btn,
@@ -606,6 +627,7 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
+  --background-color: #f1f7fc;
   color: var(--default-color);
   background-color: var(--background-color);
   border-top: 1px solid color-mix(in srgb, var(--accent-color), transparent 75%);

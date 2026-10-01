@@ -1,0 +1,12 @@
+{
+  "name": "lucid-lab-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "LUCID static website with shared Nunjucks templates",
+  "scripts": {
+    "build": "node scripts/build.cjs",
+    "check": "node scripts/build.cjs --check"
+  },
+  "engines": { "node": ">=22" },
+  "devDependencies": { "nunjucks": "3.2.4" }
+}

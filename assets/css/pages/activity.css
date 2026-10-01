@@ -1,0 +1,41 @@
+.activity-page {
+  padding: 70px 0 110px;
+  background: #fff;
+  min-height: 70vh;
+}
+
+.activity-page .page-title {
+  color: var(--accent-color);
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  font-family: var(--heading-font);
+}
+
+.activity-page .title-line {
+  border: 0;
+  border-top: 2px solid #222;
+  opacity: 1;
+  margin: 0 0 55px;
+}
+
+.activity-intro h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.activity-intro p {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #5f666c;
+}
+
+.activity-intro .activity-notice {
+  margin-top: 28px;
+}
+
+@media (max-width: 575px) {
+  .activity-page .page-title { font-size: 31px; }
+  .activity-intro h2 { font-size: 25px; }
+}

@@ -1,0 +1,231 @@
+{% extends "_includes/base.njk" %}
+{% block htmlOpen %}<html lang="en">{% endblock %}
+{% block head %}
+<title>Professor | LUCID</title>
+<meta name="description" content="Professor profile">
+<meta name="keywords" content="professor, research, laboratory">
+{% endblock %}
+{% block styles %}
+<link href="assets/css/pages/professor.css" rel="stylesheet">
+{% endblock %}
+{% block bodyOpen %}<body>{% endblock %}
+{% block content %}
+<main class="main">
+
+  <section class="professor-page">
+
+    <div class="container">
+
+      <h1 class="professor-page-title">PROFESSOR</h1>
+      <hr class="professor-title-line">
+
+      <div class="row align-items-start">
+
+        <div class="col-lg-5 professor-photo-wrap" data-aos="fade-up">
+          <img
+            src="assets/img/doctors/professor.png"
+            class="professor-photo"
+            alt="Hyun Ae Jung">
+        </div>
+
+        <div class="col-lg-7 professor-info" data-aos="fade-up" data-aos-delay="100">
+
+          <h2 class="professor-name">Hyun Ae Jung</h2>
+          <p class="professor-position">Associate Professor</p>
+          <p class="professor-role">
+            Division of Hematology-Oncology<br>
+            Samsung Medical Center
+          </p>
+
+          <div class="profile-links">
+            <div class="profile-links-row">
+              <a href="mailto:hyunae0608.jung@gmail.com" title="hyunae0608.jung@gmail.com">
+                <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+                Email
+              </a>
+              <a href="https://orcid.org/0000-0002-1583-4142"
+                 title="ORCID: 0000-0002-1583-4142"
+                 target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-person-badge-fill" aria-hidden="true"></i>
+                ORCID
+              </a>
+              <a href="https://scholar.google.com/citations?user=57vqrZYAAAAJ&amp;hl=ko"
+                 target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-mortarboard-fill" aria-hidden="true"></i>
+                Google Scholar
+              </a>
+            </div>
+            <div class="profile-links-row">
+              <a href="https://www.linkedin.com/in/hyunae-jung-86219a143/?isSelfProfile=false"
+                 target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-linkedin" aria-hidden="true"></i>
+                LinkedIn
+              </a>
+              <a href="https://x.com/HyunAeJung62662"
+                 target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-twitter-x" aria-hidden="true"></i>
+                X
+              </a>
+            </div>
+          </div>
+
+          <div class="info-divider"></div>
+
+          <div class="info-heading">Education</div>
+
+          <table class="profile-table">
+            <tbody>
+              <tr>
+                <td>Aug 2014</td>
+                <td>Ph.D., Sungkyunkwan University School of Medicine</td>
+              </tr>
+
+              <tr>
+                <td>Feb 2012</td>
+                <td>Master of Medical Science, Sungkyunkwan University School of Medicine</td>
+              </tr>
+
+              <tr>
+                <td>Feb 2007</td>
+                <td>M.D., Kyungpook National University School of Medicine</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="info-heading">Professional Experience</div>
+
+          <table class="profile-table">
+            <tbody>
+              <tr>
+                <td>Mar 2023 – Present</td>
+                <td>Associate Professor, Division of Hematology-Oncology, Samsung Medical Center</td>
+              </tr>
+
+              <tr>
+                <td>Sep 2024 – Aug 2025</td>
+                <td>Training at Massachusetts General Hospital, USA</td>
+              </tr>
+
+              <tr>
+                <td>Mar 2022 – Feb 2023</td>
+                <td>Clinical Associate Professor, Division of Hematology-Oncology, Samsung Medical Center</td>
+              </tr>
+
+              <tr>
+                <td>Mar 2020 – Feb 2022</td>
+                <td>Clinical Assistant Professor, Division of Hematology-Oncology, Samsung Medical Center</td>
+              </tr>
+
+              <tr>
+                <td>Mar 2018 – Feb 2020</td>
+                <td>Clinical Assistant Professor, Division of Hematology-Oncology, Samsung Medical Center</td>
+              </tr>
+
+              <tr>
+                <td>Mar 2015 – Feb 2018</td>
+                <td>Clinical Assistant Professor, Hallym University Dongtan Sacred Heart Hospital</td>
+              </tr>
+
+              <tr>
+                <td>Mar 2013 – Feb 2015</td>
+                <td>Clinical Fellow, Division of Hematology-Oncology, Samsung Medical Center, Sungkyunkwan University</td>
+              </tr>
+
+              <tr>
+                <td>Sep 2008 – Aug 2012</td>
+                <td>Resident in Internal Medicine, Samsung Medical Center, Sungkyunkwan University</td>
+              </tr>
+
+              <tr>
+                <td>Mar 2007 – Feb 2008</td>
+                <td>Intern, Samsung Medical Center, Sungkyunkwan University</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="info-heading">Professional Memberships</div>
+
+          <ul class="activity-list">
+            <li>Member, International Association for the Study of Lung Cancer (IASLC)</li>
+            <li>Member, Korean Association of Internal Medicine (KAIM)</li>
+            <li>Member, Korean Cancer Association (KCA)</li>
+            <li>Member, Korean Society of Medical Oncology (KSMO)</li>
+            <li>Member, Korean Association for Lung Cancer (KALC)</li>
+            <li>Member, Korean Cancer Study Group (KCSG)</li>
+            <li>Member, American Society of Clinical Oncology (ASCO)</li>
+          </ul>
+
+          <div class="info-heading">Awards</div>
+
+          <table class="profile-table">
+            <tbody>
+              <tr>
+                <td>Jan 2021</td>
+                <td>Research Grant Award, Korean Society of Medical Oncology</td>
+              </tr>
+
+              <tr>
+                <td>Jan 2019</td>
+                <td>Outstanding Presentation Award, Korean Association for Lung Cancer Fall Meeting</td>
+              </tr>
+
+              <tr>
+                <td>Jan 2017</td>
+                <td>Travel Award, JSH 2017</td>
+              </tr>
+
+              <tr>
+                <td>Jan 2017</td>
+                <td>Outstanding Protocol Award, 12th Methodology Workshop, Korean Cancer Study Group</td>
+              </tr>
+
+              <tr>
+                <td>Jan 2015</td>
+                <td>Young Investigator Award, ESMO Asia</td>
+              </tr>
+
+              <tr>
+                <td>Jan 2015</td>
+                <td>Travel Award, JSH 2015</td>
+              </tr>
+
+              <tr>
+                <td>Jan 2014</td>
+                <td>Roche Cancer Academic Award, Korean Cancer Association</td>
+              </tr>
+
+              <tr>
+                <td>Jan 2014</td>
+                <td>Korea Cancer Foundation Academic Award, Korean Association for Clinical Oncology</td>
+              </tr>
+
+              <tr>
+                <td>Jan 2012</td>
+                <td>Cancer Research Scholarship, Korea Cancer Foundation</td>
+              </tr>
+
+              <tr>
+                <td>Jan 2011</td>
+                <td>Outstanding English-Language Paper Presentation Award for Internal Medicine Residents, Samsung Medical Center</td>
+              </tr>
+
+              <tr>
+                <td>Jan 2011</td>
+                <td>Yuhan Academic Award, 1st Young Physicians Academy</td>
+              </tr>
+
+              <tr>
+                <td>Jan 2008</td>
+                <td>Outstanding Resident Award, Samsung Medical Center</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+{% endblock %}

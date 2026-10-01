@@ -1,0 +1,83 @@
+{% extends "_includes/base.njk" %}
+{% block htmlOpen %}<html lang="ko">{% endblock %}
+{% block head %}
+<title>Root Health | LUCID</title>
+{% endblock %}
+{% block styles %}
+<link href="assets/css/pages/root-health.css" rel="stylesheet">
+{% endblock %}
+{% block bodyOpen %}<body>{% endblock %}
+{% block content %}
+<main class="main">
+
+  <section class="research-detail-page">
+
+    <div class="container">
+
+      <h1 class="page-title">ROOT HEALTH</h1>
+      <hr class="title-line">
+
+      <div class="intro-copy" data-aos="fade-up">
+
+        <h2>What is ROOT HEALTH?</h2>
+
+        <p>
+          ROOT HEALTH is a research-ready oncology data platform that integrates
+          longitudinal real-world clinical information for cancer research.
+          It brings together registry information, patient characteristics,
+          follow-up and outcomes, diagnosis and staging, molecular testing,
+          treatment history, imaging, outpatient follow-up, and laboratory data.
+        </p>
+
+        <p>
+          The current NSCLC cohort includes patients who received cancer-directed
+          treatment at Samsung Medical Center and is designed to support
+          longitudinal, multimodal clinical research and AI development.
+        </p>
+
+        <div class="cohort-note">
+          <strong>Cohort definition:</strong>
+          38,154 patients with NSCLC, who received
+          anticancer treatment (Systemic therapy, surgery, radio therapy and clinical trials etc.) at Samsung Medical Center.
+          <strong>Data cutoff:</strong> September 18, 2026.
+        </div>
+
+      </div>
+
+      <div class="section-block" data-aos="fade-up">
+
+        <h2 class="section-heading">ROOT HEALTH Platform</h2>
+
+        <p class="section-description">
+          ROOT HEALTH organizes routinely generated real-world data into a
+          research-ready infrastructure for disease-specific cohort generation,
+          longitudinal analysis, and multimodal AI research.
+        </p>
+
+        <div class="figure-wrap">
+          <div class="figure-inner">
+            <img
+              src="assets/img/root-health-platform.png"
+              alt="ROOT HEALTH Platform">
+          </div>
+        </div>
+
+        <p class="figure-note">
+          ROOT HEALTH platform overview.
+        </p>
+
+      </div>
+
+      <div class="section-block" data-aos="fade-up">
+        <h2 class="section-heading">Explore Our Data</h2>
+        <p class="section-description">Discover the scale and range of our data resources,
+          including clinical variables, biomarkers, imaging, follow-up, and laboratory tests.</p>
+        <a href="data.html" class="btn btn-primary">View Data <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+{% endblock %}

@@ -1,0 +1,164 @@
+body {
+  background:#ffffff;
+}
+
+.biomarker-page {
+  padding:58px 0 90px;
+  min-height:75vh;
+  background:#ffffff;
+}
+
+.breadcrumb-line {
+  margin-bottom:24px;
+  font-size:14px;
+  color:#7a828a;
+}
+
+.breadcrumb-line a {
+  color:var(--accent-color);
+  text-decoration:none;
+  font-weight:600;
+}
+
+.page-title {
+  color:var(--accent-color);
+  font-size:38px;
+  font-weight:700;
+  margin-bottom:14px;
+  font-family:var(--heading-font);
+}
+
+.page-subtitle {
+  max-width:950px;
+  color:#59636d;
+  font-size:16px;
+  line-height:1.8;
+  margin-bottom:38px;
+}
+
+.cohort-note {
+  margin-bottom:34px;
+  padding:18px 20px;
+  background:#fff;
+  border-left:3px solid var(--accent-color);
+  border-radius:0 7px 7px 0;
+  color:#5f6972;
+  font-size:13px;
+  line-height:1.75;
+}
+
+.table-panel {
+  background:#fff;
+  border-radius:10px;
+  border:1px solid #e7ebef;
+  box-shadow:0 8px 28px rgba(30,61,89,.06);
+  overflow:hidden;
+}
+
+.table-head {
+  padding:25px 28px 20px;
+  border-bottom:1px solid #edf0f2;
+}
+
+.table-head h2 {
+  font-size:24px;
+  font-weight:700;
+  margin:0 0 8px;
+}
+
+.table-head p {
+  color:#737b83;
+  font-size:14px;
+  margin:0;
+}
+
+.table-responsive {
+  overflow-x:auto;
+}
+
+.bio-table {
+  width:100%;
+  min-width:900px;
+  margin:0;
+  border-collapse:collapse;
+}
+
+.bio-table thead th {
+  padding:15px 16px;
+  background:#ffffff;
+  color:#334455;
+  font-size:13px;
+  font-weight:700;
+  text-align:left;
+  border-bottom:1px solid #dce5ed;
+  vertical-align:middle;
+}
+
+.bio-table tbody td {
+  padding:16px;
+  border-bottom:1px solid #edf0f2;
+  color:#505a63;
+  font-size:14px;
+  line-height:1.6;
+  vertical-align:middle;
+}
+
+.bio-table tbody tr:last-child td {
+  border-bottom:0;
+}
+
+.bio-table tbody tr:hover {
+  background:#ffffff;
+}
+
+.bio-table th:nth-child(1),
+.bio-table td:nth-child(1) {
+  width:190px;
+}
+
+.bio-table th:nth-child(2),
+.bio-table td:nth-child(2) {
+  width:320px;
+}
+
+.bio-table th:nth-child(3),
+.bio-table td:nth-child(3),
+.bio-table th:nth-child(4),
+.bio-table td:nth-child(4),
+.bio-table th:nth-child(5),
+.bio-table td:nth-child(5) {
+  width:145px;
+}
+
+.marker-name {
+  color:#26333e !important;
+  font-weight:700;
+}
+
+.num {
+  text-align:right;
+  font-variant-numeric:tabular-nums;
+}
+
+.footnote {
+  margin-top:22px;
+  color:#757e86;
+  font-size:12px;
+  line-height:1.7;
+}
+
+.back-link {
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  margin-top:30px;
+  color:var(--accent-color);
+  text-decoration:none;
+  font-weight:600;
+}
+
+@media (max-width:575px) {
+  .page-title {
+    font-size:31px;
+  }
+}

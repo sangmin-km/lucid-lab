@@ -1,0 +1,42 @@
+{
+  "name": "LUCID",
+  "subtitle": "Lung Cancer Intelligence & Data Lab",
+  "email": "hyunae0608.jung@gmail.com",
+  "address": "81, Irwon-ro, Gangnam-gu, Seoul, Republic of Korea (06351)",
+  "fax": "0504-148-0589",
+  "collaborators": [
+    { "name": "Spidercore", "keywords": "Artificial Intelligence · Small Data", "logo": "assets/img/SPIDERCORE.png", "logoClass": "collaboration-logo-spidercore", "url": "https://www.spidercore.io/" },
+    { "name": "Sanofi", "keywords": "Biopharma · Medicines · Vaccines", "logo": "assets/img/SANOFI.png", "logoClass": "collaboration-logo-sanofi", "url": "https://www.sanofi.com/en" },
+    { "name": "Massachusetts General Hospital (MGH)", "keywords": "Clinical Research · Academic Medicine", "logo": "assets/img/MGH.png", "logoClass": "collaboration-logo-mgh", "url": "https://www.massgeneralbrigham.org/en/about/massachusetts-general-hospital" }
+  ],
+  "navigation": [
+    { "label": "Introduce", "href": "intro.html" },
+    { "label": "Research", "children": [
+      { "label": "Overview", "href": "research-overview.html" },
+      { "label": "Projects", "href": "projects.html" },
+      { "label": "Root Health", "href": "root-health.html" },
+      { "label": "RADAR", "href": "radar.html" },
+      { "label": "PRISM", "href": "prism.html" }
+    ] },
+    { "label": "Data", "href": "data.html" },
+    { "label": "People", "children": [
+      { "label": "Professor", "href": "professor.html" },
+      { "label": "Members", "href": "members.html" }
+    ] },
+    { "label": "Research Outputs", "children": [
+      { "label": "Publications", "href": "publications.html" },
+      { "label": "Patents", "href": "patient.html" }
+    ] },
+    { "label": "Activity", "href": "activity.html" }
+  ],
+  "quickLinks": [
+    { "label": "Introduce", "href": "intro.html" },
+    { "label": "Research", "href": "research-overview.html" },
+    { "label": "Data", "href": "data.html" },
+    { "label": "Professor", "href": "professor.html" },
+    { "label": "Members", "href": "members.html" },
+    { "label": "Publications", "href": "publications.html" },
+    { "label": "Patents", "href": "patient.html" },
+    { "label": "Activity", "href": "activity.html" }
+  ]
+}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<!-- Generated from src/pages/*.njk. Edit the source templates, then run build.cmd or npm run build. -->
+{% block htmlOpen %}<html lang="en">{% endblock %}
+<head>
+{% include "_includes/head.njk" %}
+{% block head %}{% endblock %}
+{% block styles %}{% endblock %}
+</head>
+{% block bodyOpen %}<body>{% endblock %}
+  {% include "_includes/header.njk" %}
+{% block content %}{% endblock %}
+  {% include "_includes/footer.njk" %}
+{% include "_includes/scripts.njk" %}
+{% block scripts %}{% endblock %}
+</body>
+</html>

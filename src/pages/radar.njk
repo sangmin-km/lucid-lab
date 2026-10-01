@@ -1,0 +1,40 @@
+{% extends "_includes/base.njk" %}
+{% block htmlOpen %}<html lang="ko">{% endblock %}
+{% block head %}
+<title>RADAR | LUCID</title>
+{% endblock %}
+{% block styles %}
+<link href="assets/css/pages/research-detail.css" rel="stylesheet">
+{% endblock %}
+{% block bodyOpen %}<body>{% endblock %}
+{% block content %}
+<main class="main">
+
+  <section class="research-detail-page">
+
+    <div class="container">
+
+      <h1 class="page-title">RADAR CARE</h1>
+      <hr class="title-line">
+
+      <div class="intro-copy" data-aos="fade-up">
+        <h2>RADAR CARE</h2>
+        <p>
+          RADAR CARE is an AI-based clinical risk prediction research framework.
+        </p>
+      </div>
+
+      <div class="figure-wrap" data-aos="fade-up" data-aos-delay="100">
+        <div class="figure-inner">
+          <img
+            src="assets/img/radar.png"
+            alt="RADAR Overview">
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+{% endblock %}

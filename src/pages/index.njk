@@ -1,0 +1,200 @@
+{% extends "_includes/base.njk" %}
+{% block htmlOpen %}<html lang="ko">{% endblock %}
+{% block head %}
+<title>Research Lab</title>
+<meta name="description" content="Research laboratory website">
+<meta name="keywords" content="research, laboratory, clinical data, AI">
+{% endblock %}
+{% block styles %}
+<link href="assets/css/pages/index.css" rel="stylesheet">
+{% endblock %}
+{% block bodyOpen %}<body class="index-page">{% endblock %}
+{% block content %}
+<main class="main">
+
+  <section id="hero" class="home-hero">
+
+    <img src="assets/img/home.png" alt="Research Lab" data-aos="fade-in">
+
+    <div class="container">
+
+      <div class="hero-copy" data-aos="fade-up" data-aos-delay="100">
+
+        <h1>
+          Research for Better<br> Cancer Care
+        </h1>
+  
+        <p>
+          We integrate clinical data, multimodal medical information,
+          and artificial intelligence to advance precision oncology
+          and improve patient care.
+        </p>
+
+        <a href="intro.html" class="hero-more">
+          About Our Lab
+          <i class="bi bi-arrow-right"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="news" class="news-section">
+
+    <div class="container">
+
+      <h2 class="news-title" data-aos="fade-up">
+        NEWS
+      </h2>
+
+      <a href="https://www.medifonews.com/news/article.html?no=206486" target="_blank" rel="noopener noreferrer"
+        class="news-link">
+
+        <article class="news-card">
+
+          <div class="news-image-wrap">
+            <img src="assets/img/radar.png" alt="Research news" class="news-image">
+          </div>
+
+          <div class="news-content">
+
+            <h3>
+              삼성서울병원, 조기 비소세포폐암 재발 예측 AI모델 ‘레이더(RADAR)’ 개발
+            </h3>
+
+            <p>
+              삼성서울병원 연구팀이 조기 비소세포폐암(NSCLC) 환자의 재발 위험을 최대 1년 앞서 예측하는 인공지능 모델을 개발했다.
+            </p>
+
+            <span class="news-date">
+              2026-09-16
+            </span>
+
+          </div>
+
+        </article>
+
+      </a>
+
+    </div>
+
+  </section>
+
+  <section id="collaboration" class="collaboration-section" aria-labelledby="collaboration-title">
+    <div class="container">
+      <h2 id="collaboration-title" class="collaboration-title" data-aos="fade-up">COLLABORATION</h2>
+      <p class="collaboration-intro" data-aos="fade-up">Our current collaborators in industry and academia.</p>
+
+      {% if site.collaborators.length %}
+      <div class="collaboration-logos" aria-label="Research collaborators" data-aos="fade-up">
+        {% for partner in site.collaborators %}
+        <article class="collaboration-card">
+          <a class="collaboration-logo {{ partner.logoClass }}" href="{{ partner.url }}"
+             target="_blank" rel="noopener noreferrer" aria-label="{{ partner.name }} website (opens in a new tab)">
+            <img src="{{ partner.logo }}" alt="{{ partner.name }}" loading="lazy">
+          </a>
+          <div class="collaboration-card-body">
+            <h3>{{ partner.name }}</h3>
+            <p class="collaboration-keywords">{{ partner.keywords }}</p>
+            <a class="collaboration-website" href="{{ partner.url }}" target="_blank" rel="noopener noreferrer"
+               aria-label="Visit {{ partner.name }} website (opens in a new tab)">
+              Visit Website <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <div class="collaboration-invitation" data-aos="fade-up">
+        <div class="collaboration-copy">
+          <h3>Let's advance cancer care together.</h3>
+          <p>We welcome collaborations with industry and academic partners in clinical data research,
+            multimodal AI, and precision oncology. <br>Get in touch to explore opportunities to work with our team.</p>
+        </div>
+        <div class="collaboration-contact">
+          <a class="collaboration-button" href="members.html#heejin-cho">
+            CONTACT PERSON <i class="bi bi-arrow-right" aria-hidden="true"></i>
+          </a>
+          <span>Heejin Cho · Research Collaboration</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact section">
+
+    <div class="container section-title" data-aos="fade-up">
+
+      <h2>Contact</h2>
+
+      <p>
+        Contact information and location of our laboratory.
+      </p>
+
+    </div>
+
+    <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+
+      <iframe style="border:0; width:100%; height:270px;"
+        src="https://www.google.com/maps/embed?pb=!1m5!3m3!1m2!1s0x357ca5d2fd7d2759%3A0xfe37f2771c74fd11!2z7IK87ISx7ISc7Jq467OR7JuQ!5e0!3m2!1sko!2skr!4v1790122302692!5m2!1sko!2skr"
+        width="600" height="450" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+
+    </div>
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="row gy-4">
+
+        <div class="col-lg-6 col-md-6">
+
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+
+            <i class="bi bi-geo-alt flex-shrink-0"></i>
+
+            <div>
+
+              <h3>Location</h3>
+
+              <p>
+                06351, 81, Irwon-ro, Gangnam-gu, Seoul, Republic of Korea
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="col-lg-6 col-md-6">
+
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+
+            <i class="bi bi-envelope flex-shrink-0"></i>
+
+            <div>
+
+              <h3>Email Us</h3>
+
+              <p>
+                <a href="mailto:hyunae0608.jung@gmail.com">hyunae0608.jung@gmail.com</a>
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+{% endblock %}

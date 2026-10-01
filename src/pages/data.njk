@@ -1,0 +1,227 @@
+{% extends "_includes/base.njk" %}
+{% block htmlOpen %}<html lang="ko">{% endblock %}
+{% block head %}
+<title>Data | LUCID</title>
+{% endblock %}
+{% block styles %}
+<link href="assets/css/pages/root-health.css" rel="stylesheet">
+{% endblock %}
+{% block bodyOpen %}<body>{% endblock %}
+{% block content %}
+<main class="main">
+
+  <section class="research-detail-page">
+
+    <div class="container">
+
+      <h1 class="page-title">DATA</h1>
+      <hr class="title-line">
+
+      <div class="intro-copy" data-aos="fade-up">
+        <h2>Our Data Resources</h2>
+        <p>We bring together longitudinal clinical records, molecular testing,
+          imaging, and laboratory data to support cancer research and AI development.
+          Our current data resources include the ROOT HEALTH NSCLC cohort
+          at Samsung Medical Center.</p>
+        <div class="cohort-note">
+          <strong>Cohort definition:</strong> 38,154 patients with NSCLC, who received
+          anticancer treatment (Systemic therapy, surgery, radio therapy and clinical trials etc.) at Samsung Medical Center.
+          <strong>Data cutoff:</strong> September 18, 2026.
+        </div>
+      </div>
+
+      <div class="section-block" data-aos="fade-up">
+
+          <h2 class="section-heading">Data at a Glance</h2>
+
+          <p class="section-description">
+            Key data volumes currently available in the ROOT HEALTH NSCLC cohort.
+          </p>
+
+          <div class="row gy-4">
+
+            <div class="col-xl-3 col-md-6">
+              <div class="stat-card">
+                <i class="bi bi-people"></i>
+                <span class="stat-number">38,154</span>
+                <div class="stat-label">NSCLC Patients</div>
+                <p class="stat-detail">
+                  Excluding stage 0; patients received cancer-directed treatment at SMC.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6">
+              <div class="stat-card">
+                <i class="bi bi-images"></i>
+                <span class="stat-number">692,312</span>
+                <div class="stat-label">Imaging Examinations</div>
+                <p class="stat-detail">
+                  Chest CT 500,919 · Brain MRI 117,756 · PET 73,637
+                </p>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6">
+              <div class="stat-card">
+                <i class="bi bi-hospital"></i>
+                <span class="stat-number">1,298,103</span>
+                <div class="stat-label">OPD Visits</div>
+                <p class="stat-detail">
+                  38,154 patients with OPD follow-up · mean 34.0 visits/patient
+                </p>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6">
+              <div class="stat-card">
+                <i class="bi bi-clipboard2-pulse"></i>
+                <span class="stat-number">16,649,133</span>
+                <div class="stat-label">Laboratory Tests</div>
+                <p class="stat-detail">
+                  Tests performed after NSCLC diagnosis; 37,920 patients ·
+                  mean 439.1 tests/patient
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+      </div>
+
+      <div class="section-block" data-aos="fade-up">
+
+        <h2 class="section-heading">Explore Our Data</h2>
+
+        <p class="section-description">
+          Explore our clinical, molecular, imaging, and longitudinal follow-up data.
+          Select a category to view detailed variables and counts.
+        </p>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+
+            <a class="data-link" href="root-health-clinical.html">
+
+              <div class="data-card">
+
+                <i class="bi bi-database data-icon"></i>
+
+                <h3>Clinical Variables</h3>
+
+                <p>
+                  Registry/common information, demographics, clinical trial
+                  participation, cohort classification, visits and follow-up,
+                  body measurements, vital status, recurrence, metastasis,
+                  survival outcomes, medical history, ECOG performance status,
+                  diagnosis, TNM staging, molecular examinations, and treatment history.
+                </p>
+
+                <span class="view-data">
+                  View clinical variables
+                  <i class="bi bi-arrow-right"></i>
+                </span>
+
+              </div>
+
+            </a>
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <a class="data-link" href="root-health-biomarker.html">
+
+              <div class="data-card">
+
+                <i class="bi bi-diagram-3 data-icon"></i>
+
+                <h3>Genomic &amp; Biomarker Data</h3>
+
+                <p>
+                  Testing coverage and test volumes for EGFR, ALK, PD-L1,
+                  BRAF V600E, RAS, ROS1, NTRK, HER2, MET exon 14 skipping,
+                  HER2 IHC, MET IHC/FISH, and overall NGS testing.
+                </p>
+
+                <span class="view-data">
+                  View biomarker data
+                  <i class="bi bi-arrow-right"></i>
+                </span>
+
+              </div>
+
+            </a>
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <a class="data-link" href="root-health-annual-biomarker.html">
+
+              <div class="data-card">
+
+                <i class="bi bi-graph-up data-icon"></i>
+
+                <h3>Annual Biomarker Testing</h3>
+
+                <p>
+                  Diagnosis-year-specific testing trends from 2008 through 2026,
+                  including the number and percentage of patients tested for
+                  EGFR, ALK, PD-L1, and NGS.
+                </p>
+
+                <span class="view-data">
+                  View annual testing data
+                  <i class="bi bi-arrow-right"></i>
+                </span>
+
+              </div>
+
+            </a>
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <a class="data-link" href="root-health-imaging-followup.html">
+
+              <div class="data-card">
+
+                <i class="bi bi-activity data-icon"></i>
+
+                <h3>Imaging, Follow-up &amp; Laboratory Data</h3>
+
+                <p>
+                  Imaging volumes for Chest CT, Brain MRI, and PET;
+                  outpatient follow-up metrics; and 25 laboratory test types
+                  including blood counts, chemistry, coagulation, inflammatory
+                  markers, CEA, and renal-function measurements.
+                </p>
+
+                <span class="view-data">
+                  View imaging, follow-up &amp; lab data
+                  <i class="bi bi-arrow-right"></i>
+                </span>
+
+              </div>
+
+            </a>
+
+          </div>
+
+        </div>
+
+        <p class="data-cutoff">
+          Data cutoff: September 18, 2026.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+{% endblock %}
