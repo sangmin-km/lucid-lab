@@ -11,6 +11,17 @@
   font-family: var(--heading-font);
 }
 
+.platform-full-name {
+  margin: -6px 0 24px;
+  color: #65717d;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.platform-full-name strong {
+  font-weight: 700;
+}
+
 .title-line {
   border: 0;
   border-top: 2px solid #222;

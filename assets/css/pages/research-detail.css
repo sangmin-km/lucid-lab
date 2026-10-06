@@ -11,6 +11,13 @@
   font-family: var(--heading-font);
 }
 
+.research-full-name {
+  margin: -6px 0 24px;
+  color: #65717d;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
 .title-line {
   border: 0;
   border-top: 2px solid #222;
@@ -19,7 +26,7 @@
 }
 
 .intro-copy {
-  max-width: 950px;
+  max-width: none;
   margin-bottom: 40px;
 }
 

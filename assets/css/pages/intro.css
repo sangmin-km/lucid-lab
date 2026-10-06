@@ -15,7 +15,7 @@
       border: 0;
       border-top: 2px solid #222;
       opacity: 1;
-      margin: 0 0 24px;
+      margin: 0 0 60px;
     }
 
     .intro-content h2 {
@@ -166,7 +166,7 @@
 
     @media (max-width: 991px) {
       .intro-title-line {
-        margin-bottom: 24px;
+        margin-bottom: 40px;
       }
 
       .intro-content {
