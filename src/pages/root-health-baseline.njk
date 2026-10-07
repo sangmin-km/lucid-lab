@@ -1,0 +1,108 @@
+{% extends "_includes/base.njk" %}
+{% block htmlOpen %}<html lang="en">{% endblock %}
+{% block head %}<title>Baseline Characteristics | LUCID</title>{% endblock %}
+{% block styles %}
+<link href="assets/css/pages/data-tables.css" rel="stylesheet">
+<link href="assets/css/pages/baseline.css" rel="stylesheet">
+{% endblock %}
+{% block bodyOpen %}<body>{% endblock %}
+{% block content %}
+<main class="main">
+  <section class="data-page">
+    <div class="container">
+      <div class="breadcrumb-line"><a href="data.html">Data</a> / Baseline Characteristics</div>
+      <h1 class="page-title">Baseline Characteristics</h1>
+      <p class="page-subtitle">Baseline characteristics of patients (January 1, 2008 – September 15, 2026)</p>
+      <div class="cohort-note"><strong>Total cohort: 38,399 patients.</strong> This table uses a different cohort count and reporting period from the Data at a Glance summary.</div>
+      <div class="panel">
+        <div class="table-responsive">
+          <table class="data-table baseline-table">
+            <caption class="visually-hidden">Baseline characteristics of 38,399 patients, January 1, 2008 – September 15, 2026</caption>
+            <thead><tr><th scope="col">Variables</th><th scope="col">Total</th></tr></thead>
+            <tbody>
+              <tr class="total-row"><th scope="row">Total patients</th><td>38,399</td></tr>
+              <tr class="category-row"><th scope="row">Age at diagnosis</th><td></td></tr>
+              <tr><th scope="row" class="subcategory">&lt; 65y</th><td>19,931 (51.9%)</td></tr>
+              <tr><th scope="row" class="subcategory">≥ 65y</th><td>18,468 (48.1%)</td></tr>
+              <tr class="category-row"><th scope="row">Smoking status (missing=118 (0.3%))</th><td></td></tr>
+              <tr><th scope="row" class="subcategory">Never</th><td>16,719 (43.5%)</td></tr>
+              <tr><th scope="row" class="subcategory">Former/Current</th><td>21,562 (56.2%)</td></tr>
+              <tr class="category-row"><th scope="row">Histology</th><td></td></tr>
+              <tr><th scope="row" class="subcategory">Non-adenocarcinoma</th><td>9,444 (24.6%)</td></tr>
+              <tr><th scope="row" class="subcategory">Adenocarcinoma</th><td>28,955 (75.4%)</td></tr>
+              <tr class="category-row"><th scope="row">Clinical stage (missing=82 (0.2%))</th><td></td></tr>
+              <tr><th scope="row" class="subcategory">I</th><td>17,375 (45.2%)</td></tr>
+              <tr><th scope="row" class="subcategory">II</th><td>3,649 (9.5%)</td></tr>
+              <tr><th scope="row" class="subcategory">III</th><td>5,300 (13.8%)</td></tr>
+              <tr><th scope="row" class="subcategory">IV</th><td>11,993 (31.2%)</td></tr>
+              <tr class="category-row"><th scope="row">Pathologic stage</th><td>n=22,811</td></tr>
+              <tr><th scope="row" class="subcategory">I</th><td>15,424 (40.2%)</td></tr>
+              <tr><th scope="row" class="subcategory">II</th><td>3,452 (9.0%)</td></tr>
+              <tr><th scope="row" class="subcategory">III</th><td>3,075 (8.0%)</td></tr>
+              <tr><th scope="row" class="subcategory">IV</th><td>581 (1.5%)</td></tr>
+              <tr class="category-row"><th scope="row"><em>EGFR</em> mutation</th><td>n=32,992</td></tr>
+              <tr><th scope="row" class="subcategory">No Mutation</th><td>19,113 (57.9%)</td></tr>
+              <tr><th scope="row" class="subcategory">Mutation</th><td>13,773 (41.7%)</td></tr>
+              <tr><th scope="row" class="subcategory">Not assessed</th><td>106 (0.3%)</td></tr>
+              <tr><th scope="row" class="subcategory">Del19 (L858R combine)</th><td>6,379(10) (19.3%-all/ 46.3%-Mut)</td></tr>
+              <tr><th scope="row" class="subcategory">L858R (del19 combine)</th><td>5,814(10) (17.6%-all/ 42.2%-Mut)</td></tr>
+              <tr><th scope="row" class="subcategory">Others (G719X, S768I, POL20, INS20…)</th><td>1,590 (4.8%)</td></tr>
+              <tr class="category-row"><th scope="row"><em>ALK</em> arrangement</th><td>n=32,649</td></tr>
+              <tr><th scope="row" class="subcategory">Negative</th><td>31,375 (96.1%)</td></tr>
+              <tr><th scope="row" class="subcategory">Positive</th><td>1,119 (3.4%)</td></tr>
+              <tr><th scope="row" class="subcategory">Not assessed</th><td>155 (0.5%)</td></tr>
+              <tr class="category-row"><th scope="row">PD-L1 (22C3, TPS)</th><td>n=22,383 (positive=6)</td></tr>
+              <tr><th scope="row" class="subcategory">≥50%</th><td>4,636 (12.1%)</td></tr>
+              <tr><th scope="row" class="subcategory">1–49%</th><td>5,588 (14.6%)</td></tr>
+              <tr><th scope="row" class="subcategory">&lt;1%</th><td>12,131 (31.6%)</td></tr>
+              <tr><th scope="row" class="subcategory">Not assessed</th><td>22 (0.1%)</td></tr>
+              <tr class="category-row"><th scope="row">Curative intent surgery</th><td></td></tr>
+              <tr><th scope="row" class="subcategory">Yes (+neo adj after OP)</th><td>20,501 (53.4%)</td></tr>
+              <tr class="category-row"><th scope="row">Definitive CCRT</th><td></td></tr>
+              <tr><th scope="row" class="subcategory">Yes</th><td>1,932 (5.0%)</td></tr>
+              <tr><th scope="row">First line-palliative regimen</th><td>11,993 (31.2%)</td></tr>
+              <tr><th scope="row">First line-EGFR TKI containing regimen</th><td>3,428 (8.9%)</td></tr>
+              <tr><th scope="row">First line-ALK TKI containing regimen</th><td>495 (1.3%)</td></tr>
+              <tr><th scope="row">First line-IO containing regimen</th><td>1,822 (4.7%)</td></tr>
+              <tr><th scope="row">Second line-palliative regimen</th><td>7,543 (19.6%)</td></tr>
+              <tr><th scope="row">Third line-palliative regimen</th><td>4,095 (10.7%)</td></tr>
+              <tr><th scope="row">Others (RT only, GKS only, wedge OP, etc..)</th><td>3,973 (10.3%)</td></tr>
+              <tr class="category-row"><th scope="row">NGS; Total number of NGS tests<br><span class="baseline-note">(Multiple tests per patient were counted separately)</span></th><td>6,094 (15.9%)</td></tr>
+              <tr><th scope="row" class="subcategory">Liquid NGS</th><td>1,414 (23.2%)</td></tr>
+              <tr><th scope="row" class="subcategory">Tissue NGS</th><td>4,457 (73.1%)</td></tr>
+              <tr><th scope="row">Death</th><td>16,330 (42.5%)</td></tr>
+              <tr><th scope="row">Alive (n=106 (0.3%) Death status to be confirmed)</th><td>21,963 (57.2%)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="baseline-footnotes">
+        <h2>Footnotes</h2>
+        <ul>
+          <li>Data are presented as n (%). EGFR exon 19 deletion and L858R percentages are shown among tested and mutation-positive patients; 10 patients with both mutations are included in both groups. ALK low expression was classified as negative. NA indicates an unavailable or uninterpretable test result. PD-L1 (22C3) is reported as TPS.</li>
+          <li>TNM reference implementation years: seventh edition, 2010; eighth edition, 2017 internationally (AJCC, 2018); AJCC Version 9, 2025. Institutional adoption dates were not confirmed.</li>
+          <li>Clinical and pathological stage percentages were calculated using the total cohort (N=38,399), including patients with missing stage data.</li>
+          <li>Pathologic stage includes patients who underwent surgery after neo-adjuvant therapy.</li>
+          <li>First-line EGFR/ALK TKI regimens are included in the first-line palliative treatment category. “Others” includes patients treated at SMC who did not meet the definitions of curative-intent surgery, definitive CCRT, or first-line palliative treatment.</li>
+        </ul>
+        <h2>Abbreviations</h2>
+        <p class="baseline-abbreviations">
+          <span><strong>AJCC</strong>, American Joint Committee on Cancer;</span>
+          <span><strong>ALK</strong>, anaplastic lymphoma kinase;</span>
+          <span><strong>CCRT</strong>, concurrent chemo-radiotherapy;</span>
+          <span><strong>EGFR</strong>, epidermal growth factor receptor;</span>
+          <span><strong>NGS</strong>, next-generation sequencing;</span>
+          <span><strong>NSCLC</strong>, non-small cell lung cancer;</span>
+          <span><strong>PCR</strong>, polymerase chain reaction;</span>
+          <span><strong>PD-L1</strong>, programmed death-ligand 1;</span>
+          <span><strong>TKI</strong>, tyrosine kinase inhibitor;</span>
+          <span><strong>TNM</strong>, tumor–node–metastasis;</span>
+          <span><strong>TPS</strong>, tumor proportion score;</span>
+          <span><strong>WT</strong>, wild type.</span>
+        </p>
+      </div>
+      <a href="data.html" class="back-link"><i class="bi bi-arrow-left" aria-hidden="true"></i>Back to Data</a>
+    </div>
+  </section>
+</main>
+{% endblock %}

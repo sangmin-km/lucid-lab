@@ -1,0 +1,41 @@
+[
+  {
+    "key": "2",
+    "title": "Comparative Effectiveness of Upfront Surgery, Immunotherapy-Based Perioperative Treatment, and Neoadjuvant Concurrent Chemoradiotherapy in Early-Stage Lung Cancer",
+    "subtitle": "",
+    "projectId": "RS-2026-25520844",
+    "investigator": "Hyun Ae Jung",
+    "institution": "Samsung Medical Center",
+    "agency": "Korea Health Industry Development Institute (KHIDI)",
+    "program": "Patient-Centered Medical Technology Optimization Research Program",
+    "startDate": "2026-04-01",
+    "endDate": "2027-03-31",
+    "funding": "KRW 100 million"
+  },
+  {
+    "key": "1",
+    "title": "Development and Multicenter Validation of a Multimodal Deep Learning Model for Lung Cancer Recurrence Prediction",
+    "subtitle": "RADAR CARE (Real-time Risk-Adapted Surveillance Comprehensive Strategy AI Model for Early-Stage NSCLC)",
+    "projectId": "2710079832",
+    "investigator": "Hyun Ae Jung",
+    "institution": "Samsung Medical Center",
+    "agency": "National Research Foundation of Korea (NRF)",
+    "program": "Excellent Research Program – Mid-Career Researcher (Type 1)",
+    "startDate": "2025-03-01",
+    "endDate": "2028-02-29",
+    "funding": "KRW 172.84 million"
+  },
+  {
+    "key": "20393b53-dbdc-416f-93f1-27c766a0521e",
+    "title": "Develop systematic and comprehensive cohort through an automatic real-time update system called CDW(ROOT-project)",
+    "subtitle": "",
+    "projectId": "RS-2021-NR062887",
+    "investigator": "Hyun Ae Jung",
+    "institution": "Samsung Medical Center",
+    "agency": "National Research Foundation of Korea (NRF)",
+    "program": "Basic Research Program – Individual Basic Research (R&D)",
+    "startDate": "2021-06-01",
+    "endDate": "2024-02-29",
+    "funding": "KRW 150.562 million"
+  }
+]

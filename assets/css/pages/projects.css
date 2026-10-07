@@ -30,12 +30,32 @@ body {
   margin-bottom: 18px;
 }
 
+.project-status-section {
+  padding: 0;
+  margin-top: 60px;
+}
+
+.project-status-section:first-of-type { margin-top: 0; }
+
+.project-status-title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: var(--heading-color);
+}
+
+.project-empty { color: #6c757d; }
+
 .project-item {
   background: #fff;
   border-radius: 10px;
   border: 1px solid #eceff2;
   margin-bottom: 16px;
   overflow: hidden;
+}
+
+.project-item + .section-title-small {
+  margin-top: 45px;
 }
 
 .project-button {

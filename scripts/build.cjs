@@ -5,6 +5,8 @@ const nunjucks = require('nunjucks');
 const root = path.resolve(__dirname, '..');
 const source = path.join(root, 'src');
 const site = JSON.parse(fs.readFileSync(path.join(source, 'data/site.json'), 'utf8'));
+const { groupProjectSections } = require('./projects.cjs');
+const projectSections = groupProjectSections(JSON.parse(fs.readFileSync(path.join(source, 'data/projects.json'), 'utf8')));
 const publications = JSON.parse(fs.readFileSync(path.join(source, 'data/publications.json'), 'utf8'));
 publications.searchUrl = `https://pubmed.ncbi.nlm.nih.gov/?term=${encodeURIComponent(publications.query)}&sort=date`;
 const publicationYears = [...new Set(publications.articles.map(article => article.year))]
@@ -25,6 +27,7 @@ const rendered = pages.map(template => {
   const activeHref = slug.startsWith('root-health-') ? 'data.html' : filename;
   const html = env.render(`pages/${template}`, {
     site,
+    projectSections,
     publications,
     publicationYears,
     page: {

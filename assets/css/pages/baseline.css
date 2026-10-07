@@ -1,0 +1,26 @@
+.baseline-table { min-width: 0; table-layout: fixed; }
+.baseline-table th:first-child { width: 65%; }
+.baseline-table tbody th { font-weight: 400; line-height: 1.6; border-bottom: 1px solid #edf0f2; }
+.baseline-table th, .baseline-table td { overflow-wrap: anywhere; }
+.baseline-table td, .baseline-table thead th:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+.baseline-table .category-row th, .baseline-table .category-row td,
+.baseline-table .total-row th { font-weight: 700; color: var(--heading-color); }
+.baseline-table .category-row { border-top: 2px solid #dce5ed; }
+.baseline-table th.subcategory { padding-left: 30px; }
+.baseline-note { font-weight: 400; }
+.baseline-footnotes { font-size: 13px; line-height: 1.8; color: #59636d; margin-bottom: 30px; }
+.baseline-footnotes h2 { font-size: 20px; margin: 28px 0 14px; }
+.baseline-footnotes li { margin-bottom: 12px; }
+.baseline-abbreviations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  max-width: 1100px;
+}
+.baseline-abbreviations > span { max-width: 100%; }
+.baseline-abbreviations strong { font-weight: 700; white-space: nowrap; }
+@media (max-width: 575px) {
+  .baseline-table th:first-child { width: 58%; }
+  .baseline-table th, .baseline-table td { padding: 12px 10px; }
+  .baseline-table th.subcategory { padding-left: 18px; }
+}

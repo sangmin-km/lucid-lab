@@ -14,6 +14,7 @@ Desktop.ini
 
 # Temporary update data and logs
 src/data/publications.json.tmp
+src/data/projects.json.tmp
 npm-debug.log*
 
 # Generated HTML and publications.json are intentionally tracked:

@@ -1,0 +1,37 @@
+{% for section in projectSections %}
+<section class="project-status-section" aria-labelledby="projects-{{ section.id }}">
+<h2 class="project-status-title" id="projects-{{ section.id }}">{{ section.title }}</h2>
+{% for group in section.years %}
+<h3 class="section-title-small">{{ group.year }}</h3>
+{% for project in group.projects %}
+<div class="project-item" data-aos="fade-up">
+  <button class="project-button" type="button" data-bs-toggle="collapse"
+    data-bs-target="#project-{{ project.key }}" aria-expanded="false" aria-controls="project-{{ project.key }}">
+    <div class="project-number">{% if loop.index < 10 %}0{% endif %}{{ loop.index }}</div>
+    <div>
+      <span class="project-type">Research Project</span>
+      <h3 class="project-title">{{ project.title }}</h3>
+      {% if project.subtitle %}<p class="project-subtitle">{{ project.subtitle }}</p>{% endif %}
+      <p class="project-meta">{{ project.institution }} · {{ project.periodShort }} · {{ project.funding }}</p>
+    </div>
+    <i class="bi bi-chevron-down project-icon" aria-hidden="true"></i>
+  </button>
+  <div class="collapse" id="project-{{ project.key }}">
+    <div class="project-detail">
+      <div class="detail-grid">
+        <div class="detail-label">Project ID</div><div class="detail-value">{{ project.projectId }}</div>
+        <div class="detail-label">Principal Investigator</div><div class="detail-value">{{ project.investigator }}</div>
+        <div class="detail-label">Institution</div><div class="detail-value">{{ project.institution }}</div>
+        <div class="detail-label">Funding Agency</div><div class="detail-value">{{ project.agency }}</div>
+        <div class="detail-label">Program</div><div class="detail-value">{{ project.program }}</div>
+        <div class="detail-label">Research Period</div><div class="detail-value">{{ project.periodLong }}</div>
+        <div class="detail-label">Total Research Funding</div><div class="detail-value">{{ project.funding }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% endfor %}
+{% if not section.years.length %}<p class="project-empty">No {{ section.id }} projects.</p>{% endif %}
+</section>
+{% endfor %}
